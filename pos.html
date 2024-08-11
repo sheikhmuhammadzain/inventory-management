@@ -118,6 +118,35 @@
           margin-left: 250px;
         }
       }
+      .category-btn {
+            margin-bottom: 5px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+        .product-item {
+            position: relative;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .stock-indicator {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: green;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 50%;
+            font-size: 12px;
+        }
+        .pos-section{
+            margin-top: 80px;
+            width: 60%;
+            margin-left: auto;
+        }
     </style>
   </head>
 
@@ -373,115 +402,149 @@
       </nav>
 
       <!-- Main content -->
-      <div id="content">
-        <div class="container-fluid mt-5 pt-3">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <h2>Credit Notes</h2>
-            <button class="btn btn-success">+ Add New</button>
-          </div>
-          <div class="row mb-3">
+      <div class="container-fluid pos-section    ">
+        <div class="row">
+            <!-- Left sidebar for categories -->
+            <div class="col-md-2">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success category-btn">Computer</button>
+                    <button class="btn btn-success category-btn">Shoes</button>
+                    <button class="btn btn-success category-btn">Watches</button>
+                    <button class="btn btn-success category-btn">Computer</button>
+                    <button class="btn btn-success category-btn">Shoes</button>
+                    <button class="btn btn-success category-btn">Watches</button>
+                    <button class="btn btn-success category-btn">Computer</button>
+                    <button class="btn btn-success category-btn">Shoes</button>
+                    <button class="btn btn-success category-btn">Watches</button>
+                    <button class="btn btn-success category-btn">Computer</button>
+                    <button class="btn btn-success category-btn">Shoes</button>
+                    <button class="btn btn-success category-btn">Watches</button>
+                    <!-- Add more category buttons here -->
+                </div>
+            </div>
+            
+            <!-- Main content area -->
+            <div class="col-md-7">
+                <div class="product-grid">
+                    <!-- Product items -->
+                    <div class="product-item">
+                        <span class="stock-indicator">31</span>
+                        <img src="/logo.png" alt="tws" class="img-fluid">
+                        <p>tws (1)</p>
+                    </div>
+                    <div class="product-item">
+                        <span class="stock-indicator">31</span>
+                        <img src="/logo.png" alt="tws" class="img-fluid">
+                        <p>tws (1)</p>
+                    </div>
+                    <div class="product-item">
+                        <span class="stock-indicator">31</span>
+                        <img src="/logo.png" alt="tws" class="img-fluid">
+                        <p>tws (1)</p>
+                    </div>
+                    <div class="product-item">
+                        <span class="stock-indicator">31</span>
+                        <img src="/logo.png" alt="tws" class="img-fluid">
+                        <p>tws (1)</p>
+                    </div>
+                    <div class="product-item">
+                        <span class="stock-indicator">31</span>
+                        <img src="/logo.png" alt="tws" class="img-fluid">
+                        <p>tws (1)</p>
+                    </div>
+                    <div class="product-item">
+                        <span class="stock-indicator">31</span>
+                        <img src="/logo.png" alt="tws" class="img-fluid">
+                        <p>tws (1)</p>
+                    </div>
+                    <div class="product-item">
+                        <span class="stock-indicator">31</span>
+                        <img src="/logo.png" alt="tws" class="img-fluid">
+                        <p>tws (1)</p>
+                    </div>
+                    <div class="product-item">
+                        <span class="stock-indicator">31</span>
+                        <img src="/logo.png" alt="tws" class="img-fluid">
+                        <p>tws (1)</p>
+                    </div>
+                    <div class="product-item">
+                        <span class="stock-indicator">31</span>
+                        <img src="/logo.png" alt="tws" class="img-fluid">
+                        <p>tws (1)</p>
+                    </div>
+                    <div class="product-item">
+                        <span class="stock-indicator">31</span>
+                        <img src="/logo.png" alt="tws" class="img-fluid">
+                        <p>tws (1)</p>
+                    </div>
+                    <div class="product-item">
+                        <span class="stock-indicator">31</span>
+                        <img src="/logo.png" alt="tws" class="img-fluid">
+                        <p>tws (1)</p>
+                    </div>
+                    <div class="product-item">
+                        <span class="stock-indicator">31</span>
+                        <img src="/logo.png" alt="tws" class="img-fluid">
+                        <p>tws (1)</p>
+                    </div>
+                    <div class="product-item">
+                        <span class="stock-indicator">31</span>
+                        <img src="/logo.png" alt="tws" class="img-fluid">
+                        <p>tws (1)</p>
+                    </div>
+                    <div class="product-item">
+                        <span class="stock-indicator">31</span>
+                        <img src="/logo.png" alt="tws" class="img-fluid">
+                        <p>tws (1)</p>
+                    </div>
+                    <div class="product-item">
+                        <span class="stock-indicator">31</span>
+                        <img src="/logo.png" alt="tws" class="img-fluid">
+                        <p>tws (1)</p>
+                    </div>
+                    <!-- Add more product items here -->
+                </div>
+            </div>
+            
+            <!-- Right sidebar for order details -->
             <div class="col-md-3">
-              <label for="fromDate">From Date</label>
-              <input
-                type="date"
-                class="form-control"
-                id="fromDate"
-                value="2024-08-03"
-              />
+                <h4>Choose Customer</h4>
+                <select class="form-select mb-3">
+                    <option selected>Select customer</option>
+                </select>
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Item Information</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Order items will go here -->
+                    </tbody>
+                </table>
+                
+                <div class="d-flex justify-content-between">
+                    <span>Net Amount:</span>
+                    <span>0</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span>Vat:</span>
+                    <span>0</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span>Grand Total:</span>
+                    <span>0</span>
+                </div>
+                
+                <button class="btn btn-success w-100 mt-3">Cash Payment</button>
             </div>
-            <div class="col-md-3">
-              <label for="toDate">To Date</label>
-              <input
-                type="date"
-                class="form-control"
-                id="toDate"
-                value="2024-08-10"
-              />
-            </div>
-            <div class="col-md-3">
-              <label for="invoiceNo">Invoice No</label>
-              <input
-                type="text"
-                class="form-control"
-                id="invoiceNo"
-                placeholder="Bill No"
-              />
-            </div>
-            <div class="col-md-3">
-              <label for="customer">Customer</label>
-              <select class="form-control" id="customer">
-                <option selected>Choose Customer</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Search" />
-          </div>
-
-          <table class="table table-hover">
-            <thead class="thead-light">
-              <tr>
-                <th>Customer Name</th>
-                <th>Bill No</th>
-                <th>Date</th>
-                <th>Total</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Arafat Hossain</td>
-                <td>SalinvP343SalinvS</td>
-                <td>8/10/2024 1:37:40 PM</td>
-                <td>$ 1002.00</td>
-                <td><span class="badge bg-success">Approved</span></td>
-                <td><i class="bi bi-three-dots-vertical"></i></td>
-              </tr>
-              <tr>
-                <td>Njikam Isiaka</td>
-                <td>DRAFT</td>
-                <td>8/10/2024 1:14:26 PM</td>
-                <td>$ 3175.00</td>
-                <td>
-                  <span class="badge bg-warning text-dark">Draft</span>
-                  <span class="badge bg-warning text-dark"
-                    >APPROVAL PENDING</span
-                  >
-                </td>
-                <td><i class="bi bi-three-dots-vertical"></i></td>
-              </tr>
-              <!-- Add more rows as needed -->
-            </tbody>
-          </table>
-
-          <div class="d-flex justify-content-between align-items-center">
-            <div>
-              <label for="rowsPerPage">Rows per page:</label>
-              <select
-                id="rowsPerPage"
-                class="form-select form-select-sm d-inline-block w-auto"
-              >
-                <option>10</option>
-              </select>
-            </div>
-            <nav>
-              <ul class="pagination">
-                <li class="page-item">
-                  <span class="page-link">1-6 of 6</span>
-                </li>
-                <li class="page-item disabled">
-                  <a class="page-link" href="#">&lt;</a>
-                </li>
-                <li class="page-item disabled">
-                  <a class="page-link" href="#">&gt;</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <!-- (Keep the rest of the sales invoice content) -->
         </div>
-      </div>
+    </div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
