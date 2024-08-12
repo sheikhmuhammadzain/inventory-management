@@ -85,7 +85,6 @@
       .wrapper {
         display: flex;
         width: 100%;
-        margin-top: 80px;
       }
 
       #sidebar {
@@ -143,7 +142,7 @@
             border-radius: 50%;
             font-size: 12px;
         }
-        .customer-payment{
+        .hero{
             margin-top: 80px;
             width: 60%;
             margin-left: auto;
@@ -218,7 +217,7 @@
       </div>
     </nav>
 
-    <div class="wrapper ">
+    <div class="wrapper">
       <!-- Sidebar -->
       <nav id="sidebar" class="sidebar collapse d-md-block">
         <!-- (Keep the existing sidebar content) -->
@@ -403,145 +402,124 @@
       </nav>
 
       <!-- Main content -->
-      <div class="container-fluid customer-payment">
-        <div class="row">
-            <!-- Left sidebar for categories -->
-            <div class="col-md-2">
-                <div class="d-grid gap-2">
-                    <button class="btn btn-success category-btn">Computer</button>
-                    <button class="btn btn-success category-btn">Shoes</button>
-                    <button class="btn btn-success category-btn">Watches</button>
-                    <button class="btn btn-success category-btn">Computer</button>
-                    <button class="btn btn-success category-btn">Shoes</button>
-                    <button class="btn btn-success category-btn">Watches</button>
-                    <button class="btn btn-success category-btn">Computer</button>
-                    <button class="btn btn-success category-btn">Shoes</button>
-                    <button class="btn btn-success category-btn">Watches</button>
-                    <button class="btn btn-success category-btn">Computer</button>
-                    <button class="btn btn-success category-btn">Shoes</button>
-                    <button class="btn btn-success category-btn">Watches</button>
-                    <!-- Add more category buttons here -->
-                </div>
+      <div class="container hero">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <div>
+                <h2 class="mb-0">Customer</h2>
+                <small class="text-muted">Manage Customer</small>
             </div>
-            
-            <!-- Main content area -->
-            <div class="col-md-7">
-                <div class="product-grid">
-                    <!-- Product items -->
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <!-- Add more product items here -->
-                </div>
+            <div>
+                <button class="btn btn-warning me-2">
+                    <i class="fas fa-file-import me-2"></i>Import Customer
+                </button>
+                <button class="btn btn-success">
+                    <i class="fas fa-plus me-2"></i>Add New Customer
+                </button>
             </div>
-            
-            <!-- Right sidebar for order details -->
-            <div class="col-md-3">
-                <h4>Choose Customer</h4>
-                <select class="form-select mb-3">
-                    <option selected>Select customer</option>
-                </select>
-                
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Item Information</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Order items will go here -->
-                    </tbody>
-                </table>
-                
-                <div class="d-flex justify-content-between">
-                    <span>Net Amount:</span>
-                    <span>0</span>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
                 </div>
-                <div class="d-flex justify-content-between">
-                    <span>Vat:</span>
-                    <span>0</span>
+
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>LedgerName</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Address</th>
+                                <th>Is Default</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Njikam Isiaka</td>
+                                <td>njikamisiaka@gmail.com</td>
+                                <td>+23765765656</td>
+                                <td>Bonamoussadi</td>
+                                <td>True</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Arafat Hossain</td>
+                                <td></td>
+                                <td>+8801715857485</td>
+                                <td>Dhaka</td>
+                                <td>True</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Grameen Color Thai</td>
+                                <td></td>
+                                <td></td>
+                                <td>Banani</td>
+                                <td>True</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>The Thai Inter project</td>
+                                <td></td>
+                                <td></td>
+                                <td>Mirpur</td>
+                                <td>True</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Inter Thai Aluminium</td>
+                                <td></td>
+                                <td></td>
+                                <td>Bashundhara</td>
+                                <td>True</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>jamal T</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>True</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>HNew customer</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>True</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="d-flex justify-content-between">
-                    <span>Grand Total:</span>
-                    <span>0</span>
-                </div>
-                
-                <button class="btn btn-success w-100 mt-3">Cash Payment</button>
             </div>
         </div>
     </div>

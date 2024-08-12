@@ -85,7 +85,6 @@
       .wrapper {
         display: flex;
         width: 100%;
-        margin-top: 80px;
       }
 
       #sidebar {
@@ -143,7 +142,7 @@
             border-radius: 50%;
             font-size: 12px;
         }
-        .customer-payment{
+        .hero{
             margin-top: 80px;
             width: 60%;
             margin-left: auto;
@@ -218,7 +217,7 @@
       </div>
     </nav>
 
-    <div class="wrapper ">
+    <div class="wrapper">
       <!-- Sidebar -->
       <nav id="sidebar" class="sidebar collapse d-md-block">
         <!-- (Keep the existing sidebar content) -->
@@ -259,7 +258,7 @@
                     <a class="nav-link" href="pos.html">POS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="customerpayment.html">Customer Payments</a>
+                    <a class="nav-link" href="#">Customer Payments</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="customer.html">Customers</a>
@@ -403,145 +402,71 @@
       </nav>
 
       <!-- Main content -->
-      <div class="container-fluid customer-payment">
-        <div class="row">
-            <!-- Left sidebar for categories -->
-            <div class="col-md-2">
-                <div class="d-grid gap-2">
-                    <button class="btn btn-success category-btn">Computer</button>
-                    <button class="btn btn-success category-btn">Shoes</button>
-                    <button class="btn btn-success category-btn">Watches</button>
-                    <button class="btn btn-success category-btn">Computer</button>
-                    <button class="btn btn-success category-btn">Shoes</button>
-                    <button class="btn btn-success category-btn">Watches</button>
-                    <button class="btn btn-success category-btn">Computer</button>
-                    <button class="btn btn-success category-btn">Shoes</button>
-                    <button class="btn btn-success category-btn">Watches</button>
-                    <button class="btn btn-success category-btn">Computer</button>
-                    <button class="btn btn-success category-btn">Shoes</button>
-                    <button class="btn btn-success category-btn">Watches</button>
-                    <!-- Add more category buttons here -->
-                </div>
-            </div>
-            
-            <!-- Main content area -->
-            <div class="col-md-7">
-                <div class="product-grid">
-                    <!-- Product items -->
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
+      <div class="container hero">
+        <h2>Customer Payment</h2>
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="row mb-3">
+                        <div class="col-md-4 mb-2">
+                            <label for="fromDate" class="form-label">From Date</label>
+                            <input type="date" class="form-control" id="fromDate" value="2024-05-08">
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <label for="toDate" class="form-label">To Date</label>
+                            <input type="date" class="form-control" id="toDate" value="2024-12-08">
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <label for="receiptNo" class="form-label">Receipt No</label>
+                            <div class="position-relative">
+                                <input type="text" class="form-control" id="receiptNo" placeholder="Receipt No">
+                                <button class="btn btn-warning search-icon" type="button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <div class="product-item">
-                        <span class="stock-indicator">31</span>
-                        <img src="/logo.png" alt="tws" class="img-fluid">
-                        <p>tws (1)</p>
-                    </div>
-                    <!-- Add more product items here -->
-                </div>
-            </div>
-            
-            <!-- Right sidebar for order details -->
-            <div class="col-md-3">
-                <h4>Choose Customer</h4>
-                <select class="form-select mb-3">
-                    <option selected>Select customer</option>
-                </select>
+                </form>
                 
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Item Information</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Order items will go here -->
-                    </tbody>
-                </table>
-                
-                <div class="d-flex justify-content-between">
-                    <span>Net Amount:</span>
-                    <span>0</span>
-                </div>
-                <div class="d-flex justify-content-between">
-                    <span>Vat:</span>
-                    <span>0</span>
-                </div>
-                <div class="d-flex justify-content-between">
-                    <span>Grand Total:</span>
-                    <span>0</span>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                    <input type="text" class="form-control" placeholder="Search">
                 </div>
                 
-                <button class="btn btn-success w-100 mt-3">Cash Payment</button>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Received From</th>
+                                <th>Receipt No</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table rows will be populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        Rows per page: 
+                        <select class="form-select d-inline-block w-auto">
+                            <option>10</option>
+                            <option>25</option>
+                            <option>50</option>
+                        </select>
+                    </div>
+                    <div>
+                        0-0 of 0
+                    </div>
+                    <div>
+                        <button class="btn btn-outline-secondary btn-sm" disabled><i class="fas fa-chevron-left"></i></button>
+                        <button class="btn btn-outline-secondary btn-sm" disabled><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
