@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quick Accounting Dashboard</title>
+    <title>Sales Invoice</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link
-      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+      rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- (Keep the existing head content) -->
     <style>
+      /* (Keep the existing styles) */
       body {
         display: flex;
         flex-direction: column;
@@ -25,6 +28,7 @@
 
       .sidebar {
         min-height: 100vh;
+
         background-color: #1a2c48;
       }
 
@@ -77,43 +81,49 @@
         position: relative;
         height: 300px;
       }
-      body {
-            background-color: #f8f9fa;
+      /* Add these new styles */
+      .wrapper {
+        display: flex;
+        width: 100%;
+      }
+
+      #sidebar {
+        width: 250px;
+        position: fixed;
+        top: 56px;
+        left: 0;
+        height: calc(100vh - 56px);
+        z-index: 999;
+        transition: all 0.3s;
+      }
+
+      #content {
+        width: calc(100% - 250px);
+        margin-left: 250px;
+        transition: all 0.3s;
+      }
+
+      @media (max-width: 768px) {
+        #sidebar {
+          margin-left: -250px;
         }
-        .main-content {
-            margin-left: 250px;
-            padding: 20px;
+        #content {
+          width: 100%;
+          margin-left: 0;
         }
-        .card {
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        #sidebar.active {
+          margin-left: 0;
         }
-        .search-icon {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
+        #content.active {
+          margin-left: 250px;
         }
-        .table th {
-            background-color: #f8f9fa;
-            font-weight: 600;
-        }
-        .status-badge {
-            font-size: 0.8rem;
-            padding: 0.25rem 0.5rem;
-        }
-        .action-icons i {
-            cursor: pointer;
-            margin-right: 10px;
-        }
-        .pagination-info {
-            font-size: 0.9rem;
-        }
+      }
     </style>
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <!-- (Keep the existing navbar content) -->
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="/logo.png" alt="Quick Accounting" height="35" />
@@ -178,9 +188,10 @@
       </div>
     </nav>
 
-    <div class="container-fluid flex-row">
-      <div class="row">
-        <!-- Sidebar -->
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <nav id="sidebar" class="sidebar collapse d-md-block">
+        <!-- (Keep the existing sidebar content) -->
         <nav class="col-md-3 col-lg-2 d-md-block sidebar collapse" id="sidebar">
           <div class="position-sticky pt-3">
             <a
@@ -190,7 +201,7 @@
             </a>
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="dashboard.html">
                   <i class="bi bi-speedometer2"></i> Dashboard
                 </a>
               </li>
@@ -218,12 +229,10 @@
                     <a class="nav-link" href="pos.html">POS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="customerpayment.html"
-                      >Customer Payments</a
-                    >
+                    <a class="nav-link" href="#">Customer Payments</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="customer.html">Customers</a>
+                    <a class="nav-link" href="#">Customers</a>
                   </li>
                 </ul>
               </li>
@@ -238,19 +247,10 @@
                 </a>
                 <ul class="collapse nav flex-column" id="purchaseSubmenu">
                   <li class="nav-item">
-                    <a class="nav-link" href="purchasebill.html">Purchase Bills</a>
+                    <a class="nav-link" href="#">Purchase List</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="expenses.html">Expenses</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="supplierpayments.html">Supplier Payments</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="debitsnotes.html">Debit Notes</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="debitsnotes.html">Supplier</a>
+                    <a class="nav-link" href="#">New Purchase</a>
                   </li>
                 </ul>
               </li>
@@ -265,19 +265,10 @@
                 </a>
                 <ul class="collapse nav flex-column" id="accountingSubmenu">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Journal Voucher</a>
+                    <a class="nav-link" href="#">Ledger</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Payment Voucher</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Receipt Voucher</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Charts Of Account</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Bank Accounts</a>
+                    <a class="nav-link" href="#">Journal</a>
                   </li>
                 </ul>
               </li>
@@ -295,31 +286,7 @@
                     <a class="nav-link" href="#">Employees</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Designation</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">PayHead</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Salary Package</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Attendance</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Monthly Salary Setting</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Advance Payments</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Bonus Detection</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Monthly Salary voucher</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Daily Salary voucher</a>
+                    <a class="nav-link" href="#">Payroll</a>
                   </li>
                 </ul>
               </li>
@@ -334,10 +301,10 @@
                 </a>
                 <ul class="collapse nav flex-column" id="budgetSubmenu">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Budget </a>
+                    <a class="nav-link" href="#">Budget Planning</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Budget Variance</a>
+                    <a class="nav-link" href="#">Budget Reports</a>
                   </li>
                 </ul>
               </li>
@@ -352,16 +319,10 @@
                 </a>
                 <ul class="collapse nav flex-column" id="inventorySubmenu">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
+                    <a class="nav-link" href="#">Stock List</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Product Category</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Product Brand</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Unit of measurement</a>
+                    <a class="nav-link" href="#">Stock Transfer</a>
                   </li>
                 </ul>
               </li>
@@ -381,13 +342,10 @@
                 </a>
                 <ul class="collapse nav flex-column" id="usersSubmenu">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">New User</a>
+                    <a class="nav-link" href="#">User List</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">User Lists</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Role Permission</a>
+                    <a class="nav-link" href="#">Add User</a>
                   </li>
                 </ul>
               </li>
@@ -402,142 +360,121 @@
                 </a>
                 <ul class="collapse nav flex-column" id="configSubmenu">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Apps</a>
+                    <a class="nav-link" href="#">General Settings</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Invoice Settings</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Currency Settings</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Tax Rates</a>
+                    <a class="nav-link" href="#">System Settings</a>
                   </li>
                 </ul>
               </li>
             </ul>
           </div>
         </nav>
-        <!-- Main content -->
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
-          <h2 class="text-primary mb-4">WELCOME</h2>
+      </nav>
 
-          <div class="row g-3 mb-4">
+      <!-- Main content -->
+      <div id="content">
+        <div class="container-fluid mt-5 pt-3">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2>Debit Notes</h2>
+            <button class="btn btn-success">+ Add New</button>
+          </div>
+          <div class="row mb-3">
             <div class="col-md-3">
-              <div class="card p-3">
-                <div class="icon text-warning">
-                  <i class="bi bi-briefcase"></i>
-                </div>
-                <h3>$400.00</h3>
-                <p>Purchase</p>
-              </div>
+              <label for="fromDate">From Date</label>
+              <input
+                type="date"
+                class="form-control"
+                id="fromDate"
+                value="2024-08-08"
+              />
             </div>
             <div class="col-md-3">
-              <div class="card p-3">
-                <div class="icon text-success">
-                  <i class="bi bi-cash"></i>
-                </div>
-                <h3>$98976.00</h3>
-                <p>Sales</p>
-              </div>
+              <label for="toDate">To Date</label>
+              <input
+                type="date"
+                class="form-control"
+                id="toDate"
+                value="2024-08-15"
+              />
             </div>
             <div class="col-md-3">
-              <div class="card p-3">
-                <div class="icon text-info">
-                  <i class="bi bi-receipt"></i>
-                </div>
-                <h3>$106458.76</h3>
-                <p>Receipt</p>
-              </div>
+              <label for="billNo">Bill No</label>
+              <input
+                type="text"
+                class="form-control"
+                id="billNo"
+                placeholder="Bill No"
+              />
             </div>
             <div class="col-md-3">
-              <div class="card p-3">
-                <div class="icon text-danger">
-                  <i class="bi bi-wallet"></i>
-                </div>
-                <h3>$6038.00</h3>
-                <p>Payment</p>
-              </div>
+              <label for="supplier">Supplier</label>
+              <select class="form-control" id="supplier">
+                <option selected>Choose Supplier</option>
+              </select>
             </div>
           </div>
-
-          <ul class="nav nav-pills custom-tabs mb-4">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Today</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Last 7 Days</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">This Month</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">This Year</a>
-            </li>
-          </ul>
-
-          <div class="row">
-            <div class="col-md-6">
-              <div class="card p-3 mb-4">
-                <h5 class="mb-4">Income</h5>
-                <div class="pie-chart-container">
-                  <canvas id="incomeChart"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card p-3 mb-4">
-                <h5 class="mb-4">Top 10 Products</h5>
-                <div class="pie-chart-container">
-                  <canvas id="productChart"></canvas>
-                </div>
-              </div>
-            </div>
+      
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Search" />
           </div>
-        </main>
+      
+          <table class="table table-hover">
+            <thead class="thead-light">
+              <tr>
+                <th>Supplier Name</th>
+                <th>Bill No</th>
+                <th>Date</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Add rows as needed -->
+            </tbody>
+          </table>
+      
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <label for="rowsPerPage">Rows per page:</label>
+              <select
+                id="rowsPerPage"
+                class="form-select form-select-sm d-inline-block w-auto"
+              >
+                <option>10</option>
+              </select>
+            </div>
+            <nav>
+              <ul class="pagination">
+                <li class="page-item">
+                  <span class="page-link">0-0 of 0</span>
+                </li>
+                <li class="page-item disabled">
+                  <a class="page-link" href="#">&lt;</a>
+                </li>
+                <li class="page-item disabled">
+                  <a class="page-link" href="#">&gt;</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
+      
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-      const incomeCtx = document.getElementById("incomeChart").getContext("2d");
-      const productCtx = document
-        .getElementById("productChart")
-        .getContext("2d");
+      document.addEventListener("DOMContentLoaded", function () {
+        const sidebar = document.getElementById("sidebar");
+        const content = document.getElementById("content");
+        const sidebarCollapse = document.querySelector(".navbar-toggler");
 
-      new Chart(incomeCtx, {
-        type: "pie",
-        data: {
-          labels: ["Sales Account"],
-          datasets: [
-            {
-              data: [100],
-              backgroundColor: ["#007bff"],
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-        },
-      });
-
-      new Chart(productCtx, {
-        type: "pie",
-        data: {
-          labels: ["Sample Product"],
-          datasets: [
-            {
-              data: [100],
-              backgroundColor: ["#007bff"],
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-        },
+        sidebarCollapse.addEventListener("click", function () {
+          sidebar.classList.toggle("active");
+          content.classList.toggle("active");
+        });
       });
     </script>
   </body>
