@@ -78,37 +78,61 @@
         height: 300px;
       }
       body {
-            background-color: #f8f9fa;
+        background-color: #f8f9fa;
+      }
+      .main-content {
+        margin-left: 250px;
+        padding: 20px;
+      }
+      .card {
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .search-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .table th {
+        background-color: #f8f9fa;
+        font-weight: 600;
+      }
+      .status-badge {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+      }
+      .action-icons i {
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      .pagination-info {
+        font-size: 0.9rem;
+      }
+      @media (max-width: 767.98px) {
+        .sidebar {
+          position: fixed;
+          top: 0;
+          left: -100%;
+          height: 100vh;
+          z-index: 1000;
+          overflow-y: auto;
+          transition: left 0.3s ease-in-out;
+          background-color: #010035;
         }
+
+        .sidebar.show {
+          left: 0;
+        }
+
         .main-content {
-            margin-left: 250px;
-            padding: 20px;
+          margin-left: 0 !important;
         }
-        .card {
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .search-icon {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        .table th {
-            background-color: #f8f9fa;
-            font-weight: 600;
-        }
-        .status-badge {
-            font-size: 0.8rem;
-            padding: 0.25rem 0.5rem;
-        }
-        .action-icons i {
-            cursor: pointer;
-            margin-right: 10px;
-        }
-        .pagination-info {
-            font-size: 0.9rem;
-        }
+      }
+
+      #sidebarToggle {
+        z-index: 1001;
+      }
     </style>
   </head>
 
@@ -116,7 +140,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="/logo.png" alt="Quick Accounting" height="35" />
+          <img src="/logo.png" alt="Quick Accounting" height="57" width="140" />
         </a>
         <button
           class="navbar-toggler"
@@ -178,7 +202,7 @@
       </div>
     </nav>
 
-    <div class="container-fluid flex-row">
+    <div class="container-fluid">
       <div class="row">
         <!-- Sidebar -->
         <nav class="col-md-3 col-lg-2 d-md-block sidebar collapse" id="sidebar">
@@ -195,21 +219,30 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#salesSubmenu">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#salesSubmenu"
+                >
                   <i class="bi bi-cart"></i> Sales
                 </a>
                 <ul class="collapse nav flex-column" id="salesSubmenu">
                   <li class="nav-item">
-                    <a class="nav-link" href="salesinvoice.html">Sales Invoice</a>
+                    <a class="nav-link" href="salesinvoice.html"
+                      >Sales Invoice</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="creditnotes.html">Credit Notes</a>
+                    <a class="nav-link" href="creditsnotes.html">Credit Notes</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="pos.html">POS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="customerpayment.html">Customer Payments</a>
+                    <a class="nav-link" href="customerpayment.html"
+                      >Customer Payments</a
+                    >
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="customers.html">Customers</a>
@@ -217,18 +250,27 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#purchaseSubmenu">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#purchaseSubmenu"
+                >
                   <i class="bi bi-bag"></i> Purchase
                 </a>
                 <ul class="collapse nav flex-column" id="purchaseSubmenu">
                   <li class="nav-item">
-                    <a class="nav-link" href="purchasebill.html">Purchase Bills</a>
+                    <a class="nav-link" href="purchasebill.html"
+                      >Purchase Bills</a
+                    >
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="expenses.html">Expenses</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="supplierpayments.html">Supplier Payments</a>
+                    <a class="nav-link" href="supplierpayments.html"
+                      >Supplier Payments</a
+                    >
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="debitnotes.html">Debit Notes</a>
@@ -239,29 +281,49 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#accountingSubmenu">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#accountingSubmenu"
+                >
                   <i class="bi bi-calculator"></i> Accounting
                 </a>
                 <ul class="collapse nav flex-column" id="accountingSubmenu">
                   <li class="nav-item">
-                    <a class="nav-link" href="journalvoucher.html">Journal Voucher</a>
+                    <a class="nav-link" href="journalvoucher.html"
+                      >Journal Voucher</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="paymentvoucher.html">Payment Voucher</a>
+                    <a class="nav-link" href="paymentvoucher.html"
+                      >Payment Voucher</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="receiptvoucher.html">Receipt Voucher</a>
+                    <a class="nav-link" href="receiptvoucher.html"
+                      >Receipt Voucher</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="chartsofaccount.html">Charts Of Account</a>
+                    <a class="nav-link" href="chartsofaccount.html"
+                      >Charts Of Account</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="bankaccounts.html">Bank Accounts</a>
+                    <a class="nav-link" href="bankaccounts.html"
+                      >Bank Accounts</a
+                    >
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#hrSubmenu">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#hrSubmenu"
+                >
                   <i class="bi bi-people"></i> Human Resource
                 </a>
                 <ul class="collapse nav flex-column" id="hrSubmenu">
@@ -275,30 +337,47 @@
                     <a class="nav-link" href="payhead.html">PayHead</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="salarypackage.html">Salary Package</a>
+                    <a class="nav-link" href="salarypackage.html"
+                      >Salary Package</a
+                    >
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="attendance.html">Attendance</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="monthlysalarysetting.html">Monthly Salary Setting</a>
+                    <a class="nav-link" href="monthlysalarysetting.html"
+                      >Monthly Salary Setting</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="advancepayments.html">Advance Payments</a>
+                    <a class="nav-link" href="advancepayments.html"
+                      >Advance Payments</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="bonusdetection.html">Bonus Detection</a>
+                    <a class="nav-link" href="bonusdetection.html"
+                      >Bonus Detection</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="monthlysalaryvoucher.html">Monthly Salary Voucher</a>
+                    <a class="nav-link" href="monthlysalaryvoucher.html"
+                      >Monthly Salary Voucher</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="dailysalaryvoucher.html">Daily Salary Voucher</a>
+                    <a class="nav-link" href="dailysalaryvoucher.html"
+                      >Daily Salary Voucher</a
+                    >
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#budgetSubmenu">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#budgetSubmenu"
+                >
                   <i class="bi bi-cash-coin"></i> Budget
                 </a>
                 <ul class="collapse nav flex-column" id="budgetSubmenu">
@@ -306,12 +385,19 @@
                     <a class="nav-link" href="budget.html">Budget</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="budgetvariance.html">Budget Variance</a>
+                    <a class="nav-link" href="budgetvariance.html"
+                      >Budget Variance</a
+                    >
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#inventorySubmenu">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#inventorySubmenu"
+                >
                   <i class="bi bi-box-seam"></i> Inventory
                 </a>
                 <ul class="collapse nav flex-column" id="inventorySubmenu">
@@ -319,13 +405,19 @@
                     <a class="nav-link" href="products.html">Products</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="productcategory.html">Product Category</a>
+                    <a class="nav-link" href="productcategory.html"
+                      >Product Category</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="productbrand.html">Product Brand</a>
+                    <a class="nav-link" href="productbrand.html"
+                      >Product Brand</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="unitofmeasurement.html">Unit of Measurement</a>
+                    <a class="nav-link" href="unitofmeasurement.html"
+                      >Unit of Measurement</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -335,7 +427,12 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#usersSubmenu">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#usersSubmenu"
+                >
                   <i class="bi bi-person"></i> Users
                 </a>
                 <ul class="collapse nav flex-column" id="usersSubmenu">
@@ -346,12 +443,19 @@
                     <a class="nav-link" href="userlists.html">User Lists</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="rolepermission.html">Role Permission</a>
+                    <a class="nav-link" href="rolepermission.html"
+                      >Role Permission</a
+                    >
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#configSubmenu">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#configSubmenu"
+                >
                   <i class="bi bi-gear"></i> Configuration
                 </a>
                 <ul class="collapse nav flex-column" id="configSubmenu">
@@ -359,10 +463,14 @@
                     <a class="nav-link" href="apps.html">Apps</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="invoicesettings.html">Invoice Settings</a>
+                    <a class="nav-link" href="invoicesettings.html"
+                      >Invoice Settings</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="currencysettings.html">Currency Settings</a>
+                    <a class="nav-link" href="currencysettings.html"
+                      >Currency Settings</a
+                    >
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="taxrates.html">Tax Rates</a>
@@ -370,11 +478,10 @@
                 </ul>
               </li>
             </ul>
-            
           </div>
         </nav>
         <!-- Main content -->
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
+        <main class="col-12 col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
           <h2 class="text-primary mb-4">WELCOME</h2>
 
           <div class="row g-3 mb-4">
@@ -452,10 +559,49 @@
         </main>
       </div>
     </div>
+    <button
+      id="sidebarToggle"
+      class="btn d-md-none position-fixed top-0   mt-8 ms-2"
+    >
+      <i class="bi bi-list"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const sidebar = document.getElementById('sidebar');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const mainContent = document.querySelector('.main-content');
+
+    sidebarToggle.addEventListener('click', function() {
+      sidebar.classList.toggle('show');
+    });
+
+    // Close sidebar when clicking outside
+    document.addEventListener('click', function(event) {
+      const isClickInsideSidebar = sidebar.contains(event.target);
+      const isClickOnToggleButton = sidebarToggle.contains(event.target);
+
+      if (!isClickInsideSidebar && !isClickOnToggleButton && sidebar.classList.contains('show')) {
+        sidebar.classList.remove('show');
+      }
+    });
+
+    // Adjust main content padding on window resize
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 768) {
+        mainContent.style.paddingLeft = sidebar.offsetWidth + 'px';
+      } else {
+        mainContent.style.paddingLeft = '0';
+      }
+    });
+
+    // Initial adjustment
+    if (window.innerWidth >= 768) {
+      mainContent.style.paddingLeft = sidebar.offsetWidth + 'px';
+    }
+  });
       const incomeCtx = document.getElementById("incomeChart").getContext("2d");
       const productCtx = document
         .getElementById("productChart")
