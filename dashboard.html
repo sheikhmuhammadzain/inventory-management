@@ -640,6 +640,43 @@
           maintainAspectRatio: false,
         },
       });
+        new Chart(incomeCtx, {
+        type: "pie",
+        data: {
+          labels: ["Salary", "Freelance", "Investments"],
+          datasets: [{
+            data: [50000, 20000, 15000],
+            backgroundColor: ["#4caf50", "#2196f3", "#ff9800"]
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+            }
+          }
+        }
+      });
+
+      new Chart(productCtx, {
+        type: "pie",
+        data: {
+          labels: ["Product A", "Product B", "Product C", "Product D", "Product E"],
+          datasets: [{
+            data: [30, 20, 25, 15, 10],
+            backgroundColor: ["#f44336", "#9c27b0", "#3f51b5", "#00bcd4", "#cddc39"]
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+            }
+          }
+        }
+      });
     </script>
   </body>
 </html>
