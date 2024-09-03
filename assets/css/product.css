@@ -277,7 +277,7 @@ th {
  
 .dropdown .dropdown-content{
     height: 0;
-    display: block;
+    display: none;
 :hover{
     color: var(--orange-color);
     text-decoration: underline;
