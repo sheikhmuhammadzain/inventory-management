@@ -1,101 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products
-  </title>
-  <link rel="stylesheet" href="/assets/css/product.css">
-  <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
-</head>
-<body>
-  <header>
-    <div class="left-header"><img src="/logo.png" width="140" height="58" alt="">
-      <i class="ri-toggle-line"></i>
-    </div>
-    <div class="right-header">
-      <i class="ri-notification-3-line"></i>
-      <i class="ri-user-line"></i>
-    </div>
-  </header>
-  <main>
-    <aside class="sidebar">
-      <ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="stylesheet" href="/assets/css/product.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="left-header">
+        <img src="/logo.png" width="140" height="58" alt="" />
+        <i class="ri-toggle-line"></i>
+      </div>
+      <div class="right-header">
+        <i class="ri-notification-3-line"></i>
+        <i class="ri-user-line"></i>
+      </div>
+    </header>
+    <main>
+      <aside class="sidebar">
+        <ul>
           <li>
-              <a href="dashboard.html"><i class="ri-dashboard-2-line"></i> Dashboard</a>
-              <i class="ri-arrow-right-line"></i>
+            <a href="dashboard.html"
+              ><i class="ri-dashboard-2-line"></i> Dashboard</a
+            >
+            <i class="ri-arrow-right-line"></i>
           </li>
           <li>
-              <a href="#"><i class="ri-shopping-cart-line"></i> Sales</a>
-              <i class="ri-arrow-right-line"></i>
+            <a href="#"><i class="ri-shopping-cart-line"></i> Sales</a>
+            <i class="ri-arrow-right-line"></i>
           </li>
           <li>
-              <a href="#"><i class="ri-user-add-line"></i> Purchase</a>
-              <i class="ri-arrow-right-line"></i>
+            <a href="#"><i class="ri-user-add-line"></i> Purchase</a>
+            <i class="ri-arrow-right-line"></i>
           </li>
           <li class="dropdown">
-              <a href="#"><i class="ri-instance-line"></i> Inventory</a>
-              <i class="ri-arrow-down-s-line"></i>
-              <ul class="dropdown-content">
-                  <li><a href="#">Products</a></li>
-                  <li><a href="#">Product Category</a></li>
-                  <li><a href="#">Product Brand</a></li>
-                  <li><a href="#">Units Of Measurement</a></li>
-              </ul>
-          </li>
-          <li >
-              <a href="#"><i class="ri-user-line"></i> Human Resource</a>
-              <i class="ri-arrow-right-line"></i>
+            <a href="#"><i class="ri-instance-line"></i> Inventory</a>
+            <i class="ri-arrow-down-s-line"></i>
+            <ul class="dropdown-content">
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Product Category</a></li>
+              <li><a href="#">Product Brand</a></li>
+              <li><a href="#">Units Of Measurement</a></li>
+            </ul>
           </li>
           <li>
-              <a href="#"><i class="ri-money-dollar-circle-line"></i> Budget</a>
-              <i class="ri-arrow-right-line"></i>
+            <a href="#"><i class="ri-user-line"></i> Human Resource</a>
+            <i class="ri-arrow-right-line"></i>
           </li>
           <li>
-              <a href="#"><i class="ri-file-list-3-line"></i> Reports</a>
-              <i class="ri-arrow-right-line"></i>
+            <a href="#"><i class="ri-money-dollar-circle-line"></i> Budget</a>
+            <i class="ri-arrow-right-line"></i>
           </li>
-      </ul>
-  </aside>
-    <section class="section">
-      <div class="top-section">
-        <div>
-          <h1>Product</h1>
-          <p>Manage Product</p>
+          <li>
+            <a href="#"><i class="ri-file-list-3-line"></i> Reports</a>
+            <i class="ri-arrow-right-line"></i>
+          </li>
+        </ul>
+      </aside>
+      <section class="section">
+        <div class="top-section">
+          <div>
+            <h1>Product</h1>
+            <p>Manage Product</p>
+          </div>
+          <div>
+            <button class="orange-btn">
+              <i class="ri-download-2-line"></i>
+              import Product
+            </button>
+            <button class="green-btn">
+              <i class="ri-add-large-line"></i> Add New Product
+            </button>
+          </div>
         </div>
-        <div>
-          <button class="orange-btn">
-            <i class="ri-download-2-line"></i>
-            import Product
-          </button>
-          <button class="green-btn">
-            <i class="ri-add-large-line"></i> Add New Product 
-          </button>
+        <div class="import-products">
+          <div class="import-wrapper">
+            <h1>Import Products</h1>
+            <div class="upload-btn">
+              <button><i class="ri-upload-2-line"></i> Choose File</button>
+              <p>No File Choosen</p>
+            </div>
+            <div class="import-buttons">
+              <button class="orange-btn">Submit</button>
+              <button class="orange-btn">
+                <i class="ri-download-2-line"></i>
+                Download
+              </button>
+              <button class="orange-btn cancel">Cancel</button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="bottom-section">
-        <div class="search">
-          <i class="ri-search-line"></i>
-          <input type="text" placeholder="Search">
-        </div>
-        <table>
-          <thead>
+        <div class="bottom-section">
+          <div class="search">
+            <i class="ri-search-line"></i>
+            <input type="text" placeholder="Search" />
+          </div>
+          <table>
+            <thead>
               <tr>
-                  <th>Code/Sku</th>
-                  <th>Product Name</th>
-                  <th>Unit Name</th>
-                  <th>Brand Name</th>
-                  <th>Category Name</th>
-                  <th>Purchase Rate</th>
-                  <th>Sales Rate</th>
-                  <th>Actions</th>
+                <th>Code/Sku</th>
+                <th>Product Name</th>
+                <th>Unit Name</th>
+                <th>Brand Name</th>
+                <th>Category Name</th>
+                <th>Purchase Rate</th>
+                <th>Sales Rate</th>
+                <th>Actions</th>
               </tr>
-          </thead>
-          <tbody id="table-body">
-            <tr>
+            </thead>
+            <tbody id="table-body">
+              <tr>
                 <td data-label="Code/Sku">1</td>
                 <td data-label="Product Name">tws</td>
                 <td data-label="Unit Name">Pcs</td>
@@ -104,58 +123,140 @@
                 <td data-label="Purchase Rate">AUD 100.00</td>
                 <td data-label="Sales Rate">AUD 0.00</td>
                 <td data-label="Actions">
-                    <button class="icon-btn"><i class="ri-edit-2-line"></i></button>
-                    <button class="icon-btn"><i class="ri-delete-bin-line"></i></button>
+                  <button class="icon-btn">
+                    <i class="ri-edit-2-line"></i>
+                  </button>
+                  <button class="icon-btn">
+                    <i class="ri-delete-bin-line"></i>
+                  </button>
                 </td>
-            </tr>
-            <!-- More rows... -->
-        </tbody>
-      </table>
-      <div class="pagination">
-        <div class="pagination-info">
-            <span>Rows per page: 
+              </tr>
+              <!-- More rows... -->
+            </tbody>
+          </table>
+          <div class="pagination">
+            <div class="pagination-info">
+              <span
+                >Rows per page:
                 <select id="rows-per-page">
-                    <option value="5">5</option>
-                    <option value="10" selected>10</option>
-                    <option value="20">20</option>
+                  <option value="5">5</option>
+                  <option value="10" selected>10</option>
+                  <option value="20">20</option>
                 </select>
-            </span>
-            <span id="page-info">1-10 of 70</span>
+              </span>
+              <span id="page-info">1-10 of 70</span>
+            </div>
+            <div class="pagination-controls">
+              <button id="first-page">
+                <i class="ri-arrow-left-s-line"></i>
+              </button>
+              <button id="prev-page"><i class="ri-arrow-left-line"></i></button>
+              <button id="next-page">
+                <i class="ri-arrow-right-line"></i>
+              </button>
+              <button id="last-page">
+                <i class="ri-arrow-right-s-line"></i>
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="pagination-controls">
-            <button id="first-page"><i class="ri-arrow-left-s-line"></i></button>
-            <button id="prev-page"><i class="ri-arrow-left-line"></i></button>
-            <button id="next-page"><i class="ri-arrow-right-line"></i></button>
-            <button id="last-page"><i class="ri-arrow-right-s-line"></i></button>
-        </div>
-    </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-<script>
-  const data = [
-      { code: 1, productName: 'tws', unitName: 'Pcs', brandName: 'Apple', categoryName: 'Fruits', purchaseRate: 'AUD 100.00', salesRate: 'AUD 0.00' },
-      { code: 2, productName: 'Samsung Galaxy', unitName: 'Pcs', brandName: 'NA', categoryName: 'Computer', purchaseRate: 'AUD 100.00', salesRate: 'AUD 163.00' },
-      { code: 3, productName: 'Macbook pro', unitName: 'NA', brandName: 'Apple', categoryName: 'Computer', purchaseRate: 'AUD 450.00', salesRate: 'AUD 1000.00' },
-      { code: 4, productName: 'earphones', unitName: 'Pcs', brandName: 'Apple', categoryName: 'Accessories', purchaseRate: 'AUD 68.00', salesRate: 'AUD 80.00' },
-      { code: 5, productName: 'Sattar Lok', unitName: 'Pcs', brandName: 'Apple', categoryName: 'Accessories', purchaseRate: 'AUD 20.00', salesRate: 'AUD 25.00' },
-      { code: 6, productName: 'Keyboard', unitName: 'Pcs', brandName: 'Apple', categoryName: 'Accessories', purchaseRate: 'AUD 1200.00', salesRate: 'AUD 1750.00' },
-      { code: 7, productName: 'Linda-5L', unitName: 'Pcs', brandName: 'Lindas', categoryName: 'Water', purchaseRate: 'AUD 1.00', salesRate: 'AUD 2.00' },
-      // Add more rows as needed
-  ];
+    <script>
+      document
+        .querySelector(".orange-btn")
+        .addEventListener("click", function () {
+          document.querySelector(".import-products").classList.toggle("active");
+        });
+          
+        
+        document
+        .querySelector(".cancel")
+        .addEventListener("click", function () {
+          document.querySelector(".import-products").classList.remove("active");
+        });
 
-  let currentPage = 1;
-  let rowsPerPage = 10;
 
-  function displayTable(data, page = 1, rowsPerPage = 10) {
-      const tableBody = document.getElementById('table-body');
-      tableBody.innerHTML = '';
-      const start = (page - 1) * rowsPerPage;
-      const end = start + rowsPerPage;
-      const paginatedItems = data.slice(start, end);
 
-      paginatedItems.forEach(item => {
+      const data = [
+        {
+          code: 1,
+          productName: "tws",
+          unitName: "Pcs",
+          brandName: "Apple",
+          categoryName: "Fruits",
+          purchaseRate: "AUD 100.00",
+          salesRate: "AUD 0.00",
+        },
+        {
+          code: 2,
+          productName: "Samsung Galaxy",
+          unitName: "Pcs",
+          brandName: "NA",
+          categoryName: "Computer",
+          purchaseRate: "AUD 100.00",
+          salesRate: "AUD 163.00",
+        },
+        {
+          code: 3,
+          productName: "Macbook pro",
+          unitName: "NA",
+          brandName: "Apple",
+          categoryName: "Computer",
+          purchaseRate: "AUD 450.00",
+          salesRate: "AUD 1000.00",
+        },
+        {
+          code: 4,
+          productName: "earphones",
+          unitName: "Pcs",
+          brandName: "Apple",
+          categoryName: "Accessories",
+          purchaseRate: "AUD 68.00",
+          salesRate: "AUD 80.00",
+        },
+        {
+          code: 5,
+          productName: "Sattar Lok",
+          unitName: "Pcs",
+          brandName: "Apple",
+          categoryName: "Accessories",
+          purchaseRate: "AUD 20.00",
+          salesRate: "AUD 25.00",
+        },
+        {
+          code: 6,
+          productName: "Keyboard",
+          unitName: "Pcs",
+          brandName: "Apple",
+          categoryName: "Accessories",
+          purchaseRate: "AUD 1200.00",
+          salesRate: "AUD 1750.00",
+        },
+        {
+          code: 7,
+          productName: "Linda-5L",
+          unitName: "Pcs",
+          brandName: "Lindas",
+          categoryName: "Water",
+          purchaseRate: "AUD 1.00",
+          salesRate: "AUD 2.00",
+        },
+        // Add more rows as needed
+      ];
+
+      let currentPage = 1;
+      let rowsPerPage = 10;
+
+      function displayTable(data, page = 1, rowsPerPage = 10) {
+        const tableBody = document.getElementById("table-body");
+        tableBody.innerHTML = "";
+        const start = (page - 1) * rowsPerPage;
+        const end = start + rowsPerPage;
+        const paginatedItems = data.slice(start, end);
+
+        paginatedItems.forEach((item) => {
           const row = `
               <tr>
                   <td>${item.code}</td>
@@ -171,60 +272,68 @@
                   </td>
               </tr>
           `;
-          tableBody.insertAdjacentHTML('beforeend', row);
-      });
+          tableBody.insertAdjacentHTML("beforeend", row);
+        });
 
-      document.getElementById('page-info').textContent = `${start + 1}-${Math.min(end, data.length)} of ${data.length}`;
-  }
+        document.getElementById("page-info").textContent = `${
+          start + 1
+        }-${Math.min(end, data.length)} of ${data.length}`;
+      }
 
-  function setupPagination() {
-      const rowsPerPageSelect = document.getElementById('rows-per-page');
-      rowsPerPageSelect.addEventListener('change', function() {
+      function setupPagination() {
+        const rowsPerPageSelect = document.getElementById("rows-per-page");
+        rowsPerPageSelect.addEventListener("change", function () {
           rowsPerPage = parseInt(this.value, 10);
-          currentPage = 1;  // Reset to the first page
+          currentPage = 1; // Reset to the first page
           displayTable(data, currentPage, rowsPerPage);
-      });
+        });
 
-      document.getElementById('first-page').addEventListener('click', function() {
-          currentPage = 1;
-          displayTable(data, currentPage, rowsPerPage);
-      });
+        document
+          .getElementById("first-page")
+          .addEventListener("click", function () {
+            currentPage = 1;
+            displayTable(data, currentPage, rowsPerPage);
+          });
 
-      document.getElementById('prev-page').addEventListener('click', function() {
-          if (currentPage > 1) {
+        document
+          .getElementById("prev-page")
+          .addEventListener("click", function () {
+            if (currentPage > 1) {
               currentPage--;
               displayTable(data, currentPage, rowsPerPage);
-          }
-      });
+            }
+          });
 
-      document.getElementById('next-page').addEventListener('click', function() {
-          if (currentPage * rowsPerPage < data.length) {
+        document
+          .getElementById("next-page")
+          .addEventListener("click", function () {
+            if (currentPage * rowsPerPage < data.length) {
               currentPage++;
               displayTable(data, currentPage, rowsPerPage);
-          }
+            }
+          });
+
+        document
+          .getElementById("last-page")
+          .addEventListener("click", function () {
+            currentPage = Math.ceil(data.length / rowsPerPage);
+            displayTable(data, currentPage, rowsPerPage);
+          });
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        displayTable(data, currentPage, rowsPerPage);
+        setupPagination();
       });
 
-      document.getElementById('last-page').addEventListener('click', function() {
-          currentPage = Math.ceil(data.length / rowsPerPage);
-          displayTable(data, currentPage, rowsPerPage);
+      document.querySelectorAll(".dropdown").forEach((dropdown) => {
+        dropdown.addEventListener("click", function () {
+          this.classList.toggle("active");
+          this.querySelector(".ri-arrow-down-s-line").classList.toggle(
+            "rotate"
+          );
+        });
       });
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-      displayTable(data, currentPage, rowsPerPage);
-      setupPagination();
-  });
-
-
-  document.querySelectorAll('.dropdown').forEach(dropdown => {
-    dropdown.addEventListener('click', function() {
-        this.classList.toggle('active');
-        this.querySelector('.ri-arrow-down-s-line').classList.toggle('rotate');
-    });
-});
-
-
-
-</script>
-</body>
+    </script>
+  </body>
 </html>

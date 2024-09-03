@@ -221,6 +221,60 @@ aside>ul>li:hover {
     }
   }
 }
+
+
+/* import porducts popup csss */
+
+
+.import-products{
+    display: none;
+}
+
+.import-products.active{
+    display: block;
+    position: absolute;
+inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    .import-wrapper{
+position: absolute;
+display: flex;
+flex-direction: column;
+width: 60%;
+gap: 20px;
+background-color: #fff;
+top: 50%;
+left: 50%;
+border-radius: 4px;
+transform: translate(-50%,-50%);
+padding: 20px;
+        h1{
+            margin-bottom: 20px;
+        }
+        .import-buttons{
+            display: flex;
+            gap: 10px;
+    }
+    .upload-btn{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 table {
   width: 100%;
   border-collapse: collapse;
