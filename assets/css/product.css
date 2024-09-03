@@ -8,7 +8,7 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --bg-color: #fafbfe;
+  --bg-color: #FAFBFE;
   --bg-color-light: hsl(220, 18%, 86%);
   --title-color: hsl(220, 8%, 10%);
   --text-color: hsl(220, 4%, 32%);
@@ -37,7 +37,7 @@ html {
 
 body {
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
   transition: 0.4s; /*For animation dark mode*/
 }
@@ -61,7 +61,9 @@ input {
   color: var(--text-color);
   font-size: 1.1rem;
 }
-
+.ri-delete-bin-line{
+    color: red;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -72,8 +74,8 @@ img {
   height: auto;
 }
 button {
-  padding: 10px 16px;
-  font-size: 1.1rem;
+  padding: 6px 10px;
+  font-size: 1rem;
   margin-right: 5px;
   border-radius: 5px;
   cursor: pointer;
@@ -168,10 +170,10 @@ main {
         padding: 16px;
         align-items: center;
         gap: 10px;
-        font-size: 1rem;
+        font-size: 14px;
         justify-content: space-between;
         i {
-          font-size: 1.5rem;
+          font-size: 1.1rem;
           margin-right: 10px;
           color: #405183;
         }
