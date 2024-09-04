@@ -74,7 +74,9 @@
               import Product
             </button>
             <button class="green-btn">
-              <i class="ri-add-large-line"></i> Add New Product
+              <a href="product-innerpages/addproduct.html"
+                ><i class="ri-add-large-line"></i> Add New Product
+              </a>
             </button>
           </div>
         </div>
@@ -169,15 +171,10 @@
         .addEventListener("click", function () {
           document.querySelector(".import-products").classList.toggle("active");
         });
-          
-        
-        document
-        .querySelector(".cancel")
-        .addEventListener("click", function () {
-          document.querySelector(".import-products").classList.remove("active");
-        });
 
-
+      document.querySelector(".cancel").addEventListener("click", function () {
+        document.querySelector(".import-products").classList.remove("active");
+      });
 
       const data = [
         {
