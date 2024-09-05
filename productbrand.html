@@ -3,152 +3,152 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products</title>
+    <title>Product Brands</title>
     <link rel="stylesheet" href="/assets/css/product.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
     <style>
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input[type="text"],
-        input[type="number"],
-        input[type="date"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        select {
-            height: 35px;
-        }
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 -10px;
-        }
-        .col {
-            flex: 1;
-            padding: 0 10px;
-            min-width: 200px;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        .container {
-            margin: auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .btn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-        .btn:hover {
-            background-color: #45a049;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-            
-        }
-        th {
-            background-color: #f2f2f2;
-            min-width: 300px;
-        }
-        .action-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-            margin-right: 10px;
-        }
-        .edit-btn {
-            color: #2196F3;
-        }
-        .delete-btn {
-            color: #f44336;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.4);
-        }
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .close:hover {
-            color: #000;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="number"],
+      input[type="date"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      select {
+        height: 35px;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+      }
+      .col {
+        flex: 1;
+        padding: 0 10px;
+        min-width: 200px;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      .container {
+        margin: auto;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .btn {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .btn:hover {
+        background-color: #45a049;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #f2f2f2;
+        min-width: 300px;
+      }
+      .action-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        margin-right: 10px;
+      }
+      .edit-btn {
+        color: #2196f3;
+      }
+      .delete-btn {
+        color: #f44336;
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+      }
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .close:hover {
+        color: #000;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .form-group input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
     </style>
   </head>
   <body>
@@ -206,135 +206,150 @@
       <section class="section">
         <div class="container">
           <div class="header">
-              <h1>Unit</h1>
-              <button id="addUnitBtn" class="add-btn">+ Add New Unit</button>
+            <h1>Product Brand</h1>
+            <button id="addBrandBtn" class="btn">+ Add New Brand</button>
           </div>
-          <p>Manage Unit</p>
-          <table id="unitTable">
-              <thead>
-                  <tr>
-                      <th>UNIT NAME</th>
-                      <th>NO. OF DECIMAL PLACES</th>
-                      <th>ACTION</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <!-- Units will be dynamically added here -->
-              </tbody>
+          <p>Manage Product Brands</p>
+          <table id="brandTable">
+            <thead>
+              <tr>
+                <th>IMAGE</th>
+                <th>BRAND NAME</th>
+                <th>ACTION</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Product Brands will be dynamically added here -->
+            </tbody>
           </table>
-      </div>
-  
-      <div id="unitModal" class="modal">
+        </div>
+
+        <div id="brandModal" class="modal">
           <div class="modal-content">
-              <span class="close">&times;</span>
-              <h2 id="modalTitle">Add New Unit</h2>
-              <form id="unitForm">
-                  <div class="form-group">
-                      <label for="unitName">Unit Name</label>
-                      <input type="text" id="unitName" required>
-                  </div>
-                  <div class="form-group">
-                      <label for="decimalPlaces">No. of Decimal Places</label>
-                      <input type="number" id="decimalPlaces" required min="0">
-                  </div>
-                  <button type="submit" class="add-btn">Save Unit</button>
-              </form>
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Add New Brand</h2>
+            <form id="brandForm">
+              <div class="form-group">
+                <label for="brandName">Brand Name</label>
+                <input type="text" id="brandName" required />
+              </div>
+              <div class="form-group">
+                <label for="brandImage">Brand Image URL</label>
+                <input type="text" id="brandImage" required />
+              </div>
+              <button type="submit" class="btn">Save Brand</button>
+            </form>
           </div>
-      </div>
-  
-      <script>
-          let units = [
-              { id: 1, name: 'NA', decimalPlaces: 0 },
-              { id: 2, name: 'Pcs', decimalPlaces: 1 },
-              { id: 3, name: 'Kg', decimalPlaces: 1 },
-              { id: 4, name: 'Box', decimalPlaces: 1 },
-              { id: 5, name: 'feet', decimalPlaces: 21 },
-              { id: 6, name: 'L', decimalPlaces: 2 },
-              { id: 7, name: 'Users', decimalPlaces: 0 },
-              { id: 8, name: 'carton', decimalPlaces: 100 },
-              { id: 9, name: 'Service', decimalPlaces: 0 }
-          ];
-  
-          const unitTable = document.getElementById('unitTable');
-          const addUnitBtn = document.getElementById('addUnitBtn');
-          const unitModal = document.getElementById('unitModal');
-          const closeBtn = document.getElementsByClassName('close')[0];
-          const unitForm = document.getElementById('unitForm');
-          const modalTitle = document.getElementById('modalTitle');
-  
-          let editingUnitId = null;
-  
-          function renderUnits() {
-              const tbody = unitTable.querySelector('tbody');
-              tbody.innerHTML = '';
-              units.forEach(unit => {
-                  const row = document.createElement('tr');
-                  row.innerHTML = `
-                      <td>${unit.name}</td>
-                      <td>${unit.decimalPlaces}</td>
-                      <td>
-                          <button class="action-btn edit-btn" data-id="${unit.id}"><i class="ri-pencil-line"></i></button>
-                          <button class="action-btn delete-btn" data-id="${unit.id}"><i class="ri-delete-bin-line"></i></button>
-                      </td>
-                  `;
-                  tbody.appendChild(row);
-              });
-          }
-  
-          function showModal(isEditing = false) {
-              unitModal.style.display = 'block';
-              modalTitle.textContent = isEditing ? 'Edit Unit' : 'Add New Unit';
-              if (!isEditing) {
-                  unitForm.reset();
-                  editingUnitId = null;
-              }
-          }
-  
-          function closeModal() {
-              unitModal.style.display = 'none';
-          }
-  
-          addUnitBtn.onclick = () => showModal();
-          closeBtn.onclick = closeModal;
-  
-          window.onclick = (event) => {
-              if (event.target == unitModal) {
-                  closeModal();
-              }
-          };
-  
-          unitForm.onsubmit = (e) => {
-              e.preventDefault();
-              const name = document.getElementById('unitName').value;
-              const decimalPlaces = parseInt(document.getElementById('decimalPlaces').value);
-              if (editingUnitId) {
-                  const index = units.findIndex(u => u.id === editingUnitId);
-                  units[index] = { ...units[index], name, decimalPlaces };
-              } else {
-                  const newId = units.length > 0 ? Math.max(...units.map(u => u.id)) + 1 : 1;
-                  units.push({ id: newId, name, decimalPlaces });
-              }
-              renderUnits();
-              closeModal();
-          };
-  
-          unitTable.addEventListener('click', (e) => {
-              if (e.target.closest('.edit-btn')) {
-                  const id = Number(e.target.closest('.edit-btn').getAttribute('data-id'));
-                  const unit = units.find(u => u.id === id);
-                  document.getElementById('unitName').value = unit.name;
-                  document.getElementById('decimalPlaces').value = unit.decimalPlaces;
-                  editingUnitId = id;
-                  showModal(true);
-              } else if (e.target.closest('.delete-btn')) {
-                  const id = Number(e.target.closest('.delete-btn').getAttribute('data-id'));
-                  units = units.filter(u => u.id !== id);
-                  renderUnits();
-              }
-          });
-  
-          renderUnits();
-      </script>
-    <script src="/scripts/dropdown.js"></script>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      let brands = [
+        {
+          id: 1,
+          name: "Apple",
+          image: "https://example.com/apple-logo.png",
+        },
+        {
+          id: 2,
+          name: "Nike",
+          image: "https://example.com/nike-logo.png",
+        },
+      ];
+
+      const brandTable = document.getElementById("brandTable");
+      const addBrandBtn = document.getElementById("addBrandBtn");
+      const brandModal = document.getElementById("brandModal");
+      const closeBtn = document.getElementsByClassName("close")[0];
+      const brandForm = document.getElementById("brandForm");
+      const modalTitle = document.getElementById("modalTitle");
+
+      let editingBrandId = null;
+
+      function renderBrands() {
+        const tbody = brandTable.querySelector("tbody");
+        tbody.innerHTML = "";
+        brands.forEach((brand) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td><img src="${brand.image}" alt="${brand.name}" width="50" height="50"></td>
+            <td>${brand.name}</td>
+            <td>
+              <button class="action-btn edit-btn" data-id="${brand.id}">
+                <i class="ri-edit-line"></i>
+              </button>
+              <button class="action-btn delete-btn" data-id="${brand.id}">
+                <i class="ri-delete-bin-6-line"></i>
+              </button>
+            </td>
+          `;
+          tbody.appendChild(row);
+        });
+      }
+
+      function openModal(isEdit = false) {
+        brandModal.style.display = "block";
+        if (isEdit) {
+          modalTitle.textContent = "Edit Brand";
+        } else {
+          modalTitle.textContent = "Add New Brand";
+        }
+      }
+
+      function closeModal() {
+        brandModal.style.display = "none";
+        brandForm.reset();
+        editingBrandId = null;
+      }
+
+      addBrandBtn.addEventListener("click", () => {
+        openModal();
+      });
+
+      closeBtn.addEventListener("click", closeModal);
+
+      brandForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const brandName = document.getElementById("brandName").value;
+        const brandImage = document.getElementById("brandImage").value;
+
+        if (editingBrandId) {
+          const brandIndex = brands.findIndex((brand) => brand.id === editingBrandId);
+          brands[brandIndex] = { id: editingBrandId, name: brandName, image: brandImage };
+        } else {
+          const newBrand = { id: Date.now(), name: brandName, image: brandImage };
+          brands.push(newBrand);
+        }
+
+        renderBrands();
+        closeModal();
+      });
+
+      brandTable.addEventListener("click", (e) => {
+        if (e.target.closest(".edit-btn")) {
+          const id = parseInt(e.target.closest(".edit-btn").dataset.id);
+          const brand = brands.find((brand) => brand.id === id);
+          document.getElementById("brandName").value = brand.name;
+          document.getElementById("brandImage").value = brand.image;
+          editingBrandId = id;
+          openModal(true);
+        }
+
+        if (e.target.closest(".delete-btn")) {
+          const id = parseInt(e.target.closest(".delete-btn").dataset.id);
+          brands = brands.filter((brand) => brand.id !== id);
+          renderBrands();
+        }
+      });
+
+      window.onclick = function (event) {
+        if (event.target === brandModal) {
+          closeModal();
+        }
+      };
+
+      renderBrands();
+    </script>
   </body>
 </html>
