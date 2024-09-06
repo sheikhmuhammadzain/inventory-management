@@ -11,7 +11,7 @@
 <body>
   <header>
     <div class="left-header"><img src="/logo.png" width="140" height="58" alt="">
-      <i class="ri-toggle-line"></i>
+      <i class="ri-toggle-line" id="toggleIcon"></i>
     </div>
     <div class="right-header">
       <i class="ri-notification-3-line"></i>
@@ -20,43 +20,58 @@
   </header>
   <main>
     <aside class="sidebar">
-      <ul>
-          <li>
-              <a href="dashboard.html"><i class="ri-dashboard-2-line"></i> Dashboard</a>
-              <i class="ri-arrow-right-line"></i>
-          </li>
-          <li>
-              <a href="#"><i class="ri-shopping-cart-line"></i> Sales</a>
-              <i class="ri-arrow-right-line"></i>
-          </li>
-          <li>
-              <a href="#"><i class="ri-user-add-line"></i> Purchase</a>
-              <i class="ri-arrow-right-line"></i>
-          </li>
-          <li class="dropdown">
-              <a href="#"><i class="ri-instance-line"></i> Inventory</a>
-              <i class="ri-arrow-down-s-line"></i>
-              <ul class="dropdown-content">
-                  <li><a href="products.html">Products</a></li>
-                  <li><a href="productcategory.html">Product Category</a></li>
-                  <li><a href="productbrand.html">Product Brand</a></li>
-                  <li><a href="unitofmeasurement.html">Units Of Measurement</a></li>
-              </ul>
-          </li>
-          <li >
-              <a href="#"><i class="ri-user-line"></i> Human Resource</a>
-              <i class="ri-arrow-right-line"></i>
-          </li>
-          <li>
-              <a href="#"><i class="ri-money-dollar-circle-line"></i> Budget</a>
-              <i class="ri-arrow-right-line"></i>
-          </li>
-          <li>
-              <a href="#"><i class="ri-file-list-3-line"></i> Reports</a>
-              <i class="ri-arrow-right-line"></i>
-          </li>
-      </ul>
-  </aside>
+        <ul>
+            <li>
+                <a href="dashboard.html"><i class="ri-dashboard-2-line"></i> Dashboard</a>
+                <i class="ri-arrow-right-line"></i>
+            </li>
+            <li class="dropdown">
+                <a href="#"><i class="ri-shopping-cart-line"></i> Sales</a>
+                <i class="ri-arrow-down-s-line"></i>
+                <ul class="dropdown-content">
+                    <li><a href="salesinvoice.html">Sales Invoice</a></li>
+                    <li><a href="creditsnotes.html">Credit Notes</a></li>
+                    <li><a href="pos.html">POS</a></li>
+                    <li><a href="customerpayment.html">Customer Payment</a></li>
+                    <li><a href="customer.html">Customers</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#"><i class="ri-user-add-line"></i> Purchase</a>
+                <i class="ri-arrow-down-s-line"></i>
+                <ul class="dropdown-content">
+                    <li><a href="#">Purchase Bills</a></li>
+                    <li><a href="#">Expenses</a></li>
+                    <li><a href="#">Supplier Payment</a></li>
+                    <li><a href="#">Debit Notes</a></li>
+                    <li><a href="#">Suppliers</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#"><i class="ri-instance-line"></i> Inventory</a>
+                <i class="ri-arrow-down-s-line"></i>
+                <ul class="dropdown-content">
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="productcategory.html">Product Category</a></li>
+                    <li><a href="productbrand.html">Product Brand</a></li>
+                    <li><a href="unitofmeasurement.html">Units Of Measurement</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="ri-user-line"></i> Human Resource</a>
+                <i class="ri-arrow-right-line"></i>
+            </li>
+            <li>
+                <a href="#"><i class="ri-money-dollar-circle-line"></i> Budget</a>
+                <i class="ri-arrow-right-line"></i>
+            </li>
+            <li>
+                <a href="#"><i class="ri-file-list-3-line"></i> Reports</a>
+                <i class="ri-arrow-right-line"></i>
+            </li>
+        </ul>
+    </aside>
+    
     <section class="section">
       <div class="dashboard">
         <div class="main-header">
@@ -115,7 +130,7 @@
             </div>
         </div>
     </div>
-    <div class="card">
+    <div class="card bankcard">
         <h2>Bank and Cash Balance</h2>
         <table>
             <thead>
@@ -239,7 +254,7 @@
             </div>
         </div>
     </div>
-    
+
     
     </section>
   </main>
@@ -312,6 +327,18 @@ document.querySelectorAll('.dropdown').forEach(dropdown => {
     });
 });
 
+const toggleIcon = document.getElementById('toggleIcon');
+
+toggleIcon.addEventListener('click', function() {
+
+    toggleIcon.classList.toggle('active');
+ 
+
+    document.querySelector('.sidebar').classList.toggle('collapsed');
+    document.querySelector('.section').classList.toggle('open');
+
+
+});
 
 
     </script>
