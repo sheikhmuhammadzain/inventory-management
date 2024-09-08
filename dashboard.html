@@ -1,346 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/dashboard.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/dashboard.css" />
+    <link
+      rel="shortcut icon"
+      href="/logo.png"
+      type="image/x-icon"
+    />
+  </head>
 
-<body>
-  <header>
-    <div class="left-header"><img src="/logo.png" width="140" height="58" alt="">
-      <i class="ri-toggle-line" id="toggleIcon"></i>
-    </div>
-    <div class="right-header">
-      <i class="ri-notification-3-line"></i>
-      <i class="ri-user-line"></i>
-    </div>
-  </header>
-  <main>
-    <aside class="sidebar">
+  <body>
+    <header>
+      <div class="left-header">
+        <img src="/logo.png" width="140" height="58" alt="" />
+        <i class="ri-toggle-line" id="toggleIcon"></i>
+      </div>
+      <div class="right-header">
+        <i class="ri-notification-3-line"></i>
+        <i class="ri-user-line"></i>
+      </div>
+    </header>
+    <main>
+      <aside class="sidebar">
         <ul>
-            <li>
-                <a href="dashboard.html"><i class="ri-dashboard-2-line"></i> Dashboard</a>
-                <i class="ri-arrow-right-line"></i>
-            </li>
-            <li class="dropdown">
-                <a href="#"><i class="ri-shopping-cart-line"></i> Sales</a>
-                <i class="ri-arrow-down-s-line"></i>
-                <ul class="dropdown-content">
-                    <li><a href="salesinvoice.html">Sales Invoice</a></li>
-                    <li><a href="creditsnotes.html">Credit Notes</a></li>
-                    <li><a href="pos.html">POS</a></li>
-                    <li><a href="customerpayment.html">Customer Payment</a></li>
-                    <li><a href="customer.html">Customers</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#"><i class="ri-user-add-line"></i> Purchase</a>
-                <i class="ri-arrow-down-s-line"></i>
-                <ul class="dropdown-content">
-                    <li><a href="#">Purchase Bills</a></li>
-                    <li><a href="#">Expenses</a></li>
-                    <li><a href="#">Supplier Payment</a></li>
-                    <li><a href="#">Debit Notes</a></li>
-                    <li><a href="#">Suppliers</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#"><i class="ri-instance-line"></i> Inventory</a>
-                <i class="ri-arrow-down-s-line"></i>
-                <ul class="dropdown-content">
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="productcategory.html">Product Category</a></li>
-                    <li><a href="productbrand.html">Product Brand</a></li>
-                    <li><a href="unitofmeasurement.html">Units Of Measurement</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#"><i class="ri-user-line"></i> Human Resource</a>
-                <i class="ri-arrow-right-line"></i>
-            </li>
-            <li>
-                <a href="#"><i class="ri-money-dollar-circle-line"></i> Budget</a>
-                <i class="ri-arrow-right-line"></i>
-            </li>
-            <li>
-                <a href="#"><i class="ri-file-list-3-line"></i> Reports</a>
-                <i class="ri-arrow-right-line"></i>
-            </li>
+          <li>
+            <a href="dashboard.html"
+              ><i class="ri-dashboard-2-line"></i> Dashboard</a
+            >
+            <i class="ri-arrow-right-line"></i>
+          </li>
+          <li class="dropdown">
+            <a href="#"><i class="ri-shopping-cart-line"></i> Sales</a>
+            <i class="ri-arrow-down-s-line"></i>
+            <ul class="dropdown-content">
+              <li><a href="salesinvoice.html">Sales Invoice</a></li>
+              <li><a href="creditsnotes.html">Credit Notes</a></li>
+              <li><a href="pos.html">POS</a></li>
+              <li><a href="customerpayment.html">Customer Payment</a></li>
+              <li><a href="customer.html">Customers</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#"><i class="ri-user-add-line"></i> Purchase</a>
+            <i class="ri-arrow-down-s-line"></i>
+            <ul class="dropdown-content">
+              <li><a href="#">Purchase Bills</a></li>
+              <li><a href="#">Expenses</a></li>
+              <li><a href="#">Supplier Payment</a></li>
+              <li><a href="#">Debit Notes</a></li>
+              <li><a href="#">Suppliers</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#"><i class="ri-instance-line"></i> Inventory</a>
+            <i class="ri-arrow-down-s-line"></i>
+            <ul class="dropdown-content">
+              <li><a href="products.html">Products</a></li>
+              <li><a href="productcategory.html">Product Category</a></li>
+              <li><a href="productbrand.html">Product Brand</a></li>
+              <li><a href="unitofmeasurement.html">Units Of Measurement</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><i class="ri-user-line"></i> Human Resource</a>
+            <i class="ri-arrow-right-line"></i>
+          </li>
+          <li>
+            <a href="#"><i class="ri-money-dollar-circle-line"></i> Budget</a>
+            <i class="ri-arrow-right-line"></i>
+          </li>
+          <li>
+            <a href="#"><i class="ri-file-list-3-line"></i> Reports</a>
+            <i class="ri-arrow-right-line"></i>
+          </li>
         </ul>
-    </aside>
-    
-    <section class="section">
-      <div class="dashboard">
-        <div class="main-header">
+      </aside>
+
+      <section class="section">
+        <div class="dashboard">
+          <div class="main-header">
             <h1>WELCOME</h1>
             <div class="date-filters">
-                <button>Today</button>
-                <button>Last 7 Days</button>
-                <button>This Month</button>
-                <button>This Year</button>
+              <button>Today</button>
+              <button>Last 7 Days</button>
+              <button>This Month</button>
+              <button>This Year</button>
             </div>
-        </div>
-        
-        <div class="cards">
-            <div class="card">
-                <div class="icon"><i class="ri-shopping-bag-line"></i></div>
-                <div class="details">
-                    <h2>AUD</h2>
-                    <p>10789700.00</p>
-                    <span>Purchase</span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon"><i class="ri-money-dollar-circle-line"></i></div>
-                <div class="details">
-                    <h2>AUD</h2>
-                    <p>199504483.16</p>
-                    <span>Sales</span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon"><i class="ri-refund-2-line"></i></div>
-                <div class="details">
-                    <h2>AUD</h2>
-                    <p>23648007.21</p>
-                    <span>Receipt</span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon"><i class="ri-arrow-up-circle-line"></i></div>
-                <div class="details">
-                    <h2>AUD</h2>
-                    <p>100586121.00</p>
-                    <span>Payment</span>
-                </div>
-            </div>
-        </div>
+          </div>
 
-        <div class="charts">
+          <div class="cards">
+            <div class="card">
+              <div class="icon"><i class="ri-shopping-bag-line"></i></div>
+              <div class="details">
+                <h2>AUD</h2>
+                <p>10789700.00</p>
+                <span>Purchase</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="icon">
+                <i class="ri-money-dollar-circle-line"></i>
+              </div>
+              <div class="details">
+                <h2>AUD</h2>
+                <p>199504483.16</p>
+                <span>Sales</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="icon"><i class="ri-refund-2-line"></i></div>
+              <div class="details">
+                <h2>AUD</h2>
+                <p>23648007.21</p>
+                <span>Receipt</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="icon"><i class="ri-arrow-up-circle-line"></i></div>
+              <div class="details">
+                <h2>AUD</h2>
+                <p>100586121.00</p>
+                <span>Payment</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="charts">
             <div class="chart">
-                <h3>Income</h3>
-                <canvas id="incomeChart"></canvas>
+              <h3>Income</h3>
+              <canvas id="incomeChart"></canvas>
             </div>
             <div class="chart">
-                <h3>Top 10 Product</h3>
-                <canvas id="topProductChart"></canvas>
+              <h3>Top 10 Product</h3>
+              <canvas id="topProductChart"></canvas>
             </div>
+          </div>
         </div>
-    </div>
-    <div class="card bankcard">
-        <h2>Bank and Cash Balance</h2>
-        <table>
+        <div class="card bankcard">
+          <h2>Bank and Cash Balance</h2>
+          <table>
             <thead>
-                <tr>
-                    <th>Cash / Bank</th>
-                    <th>Amount</th>
-                </tr>
+              <tr>
+                <th>Cash / Bank</th>
+                <th>Amount</th>
+              </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><i class="ri-bank-line"></i> AIB</td>
-                    <td>AUD -32633.90</td>
-                </tr>
-                <tr>
-                    <td><i class="ri-bank-card-line"></i> Bank AA</td>
-                    <td>AUD 24000.00</td>
-                </tr>
-                <tr>
-                    <td><i class="ri-group-line"></i> Bank Account Group SL</td>
-                    <td>AUD -113600.00</td>
-                </tr>
-                <tr>
-                    <td><i class="ri-bank-line"></i> Bank Of Stats</td>
-                    <td>AUD 4800.00</td>
-                </tr>
-                <tr>
-                    <td><i class="ri-bank-line"></i> Banks Sri Lanka</td>
-                    <td>AUD -124749.00</td>
-                </tr>
-                <tr>
-                    <td><i class="ri-bank-card-line"></i> B-bakd</td>
-                    <td>AUD 32000.00</td>
-                </tr>
-                <tr>
-                    <td><i class="ri-bank-card-line"></i> BRAC</td>
-                    <td>AUD 17000.00</td>
-                </tr>
-                <tr>
-                    <td><i class="ri-bank-line"></i> Citi Group</td>
-                    <td>AUD -18629.36</td>
-                </tr>
-                <tr>
-                    <td><i class="ri-bank-line"></i> Islami Bank Ltd</td>
-                    <td>AUD 222003.00</td>
-                </tr>
-                <tr>
-                    <td><i class="ri-bank-line"></i> MBL</td>
-                    <td>AUD 1350.00</td>
-                </tr>
+              <tr>
+                <td><i class="ri-bank-line"></i> AIB</td>
+                <td>AUD -32633.90</td>
+              </tr>
+              <tr>
+                <td><i class="ri-bank-card-line"></i> Bank AA</td>
+                <td>AUD 24000.00</td>
+              </tr>
+              <tr>
+                <td><i class="ri-group-line"></i> Bank Account Group SL</td>
+                <td>AUD -113600.00</td>
+              </tr>
+              <tr>
+                <td><i class="ri-bank-line"></i> Bank Of Stats</td>
+                <td>AUD 4800.00</td>
+              </tr>
+              <tr>
+                <td><i class="ri-bank-line"></i> Banks Sri Lanka</td>
+                <td>AUD -124749.00</td>
+              </tr>
+              <tr>
+                <td><i class="ri-bank-card-line"></i> B-bakd</td>
+                <td>AUD 32000.00</td>
+              </tr>
+              <tr>
+                <td><i class="ri-bank-card-line"></i> BRAC</td>
+                <td>AUD 17000.00</td>
+              </tr>
+              <tr>
+                <td><i class="ri-bank-line"></i> Citi Group</td>
+                <td>AUD -18629.36</td>
+              </tr>
+              <tr>
+                <td><i class="ri-bank-line"></i> Islami Bank Ltd</td>
+                <td>AUD 222003.00</td>
+              </tr>
+              <tr>
+                <td><i class="ri-bank-line"></i> MBL</td>
+                <td>AUD 1350.00</td>
+              </tr>
             </tbody>
-        </table>
-    </div> 
-    <div class="transaction-card">
-        <h2>Recent Transaction</h2>
-        <div class="transaction-tabs">
+          </table>
+        </div>
+        <div class="transaction-card">
+          <h2>Recent Transaction</h2>
+          <div class="transaction-tabs">
             <button class="tab active">SALES</button>
             <button class="tab">PURCHASE</button>
             <button class="tab">CREDIT NOTE</button>
             <button class="tab">DEBIT NOTE</button>
             <button class="tab">JOURNAL VOUCHER</button>
             <button class="tab">RECEIPT VOUCHER</button>
-        </div>
-        <table class="transaction-table">
+            <button class="tab">PAYMENT VOUCHER</button>
+          </div>
+          <table class="transaction-table">
             <thead>
-                <tr>
-                    <th>Customer Name</th>
-                    <th>Invoice No</th>
-                    <th>Reference</th>
-                    <th>Date</th>
-                    <th>Total</th>
-                    <th>Status</th>
-                </tr>
+              <tr>
+                <th>Customer Name</th>
+                <th>Invoice No</th>
+                <th>Reference</th>
+                <th>Date</th>
+                <th>Total</th>
+                <th>Status</th>
+              </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Njikam Isiaka</td>
-                    <td>DRAFT</td>
-                    <td></td>
-                    <td>9/4/2024 5:26:53 PM</td>
-                    <td>AUD 1676.00</td>
-                    <td><span class="status draft">Draft</span></td>
-                </tr>
-                <tr>
-                    <td>Arafat Hossain</td>
-                    <td>DRAFT</td>
-                    <td></td>
-                    <td>9/2/2024 5:26:53 PM</td>
-                    <td>AUD 2280.00</td>
-                    <td><span class="status approval-pending">Approval Pending</span></td>
-                </tr>
-                <tr>
-                    <td>Arafat Hossain</td>
-                    <td>DRAFT</td>
-                    <td></td>
-                    <td>9/2/2024 6:26:17 PM</td>
-                    <td>AUD 80.00</td>
-                    <td><span class="status approval-pending">Approval Pending</span></td>
-                </tr>
-                <tr>
-                    <td>Njikam Isiaka</td>
-                    <td>SalInvP355SalInvS</td>
-                    <td></td>
-                    <td>9/2/2024 5:31:06 AM</td>
-                    <td>AUD 652.00</td>
-                    <td><span class="status approved">Approved</span></td>
-                </tr>
+              <tr>
+                <td>Njikam Isiaka</td>
+                <td>DRAFT</td>
+                <td></td>
+                <td>9/4/2024 5:26:53 PM</td>
+                <td>AUD 1676.00</td>
+                <td><span class="status draft">Draft</span></td>
+              </tr>
+              <tr>
+                <td>Arafat Hossain</td>
+                <td>DRAFT</td>
+                <td></td>
+                <td>9/2/2024 5:26:53 PM</td>
+                <td>AUD 2280.00</td>
+                <td>
+                  <span class="status approval-pending">Approval Pending</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Arafat Hossain</td>
+                <td>DRAFT</td>
+                <td></td>
+                <td>9/2/2024 6:26:17 PM</td>
+                <td>AUD 80.00</td>
+                <td>
+                  <span class="status approval-pending">Approval Pending</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Njikam Isiaka</td>
+                <td>SalInvP355SalInvS</td>
+                <td></td>
+                <td>9/2/2024 5:31:06 AM</td>
+                <td>AUD 652.00</td>
+                <td><span class="status approved">Approved</span></td>
+              </tr>
             </tbody>
-        </table>
-    
-        <div class="pagination">
+          </table>
+
+          <div class="pagination">
             <span>Rows per page:</span>
             <select>
-                <option>10</option>
-                <option>20</option>
-                <option>30</option>
+              <option>10</option>
+              <option>20</option>
+              <option>30</option>
             </select>
             <span>1-4 of 4</span>
             <div class="pagination-controls">
-                <button disabled><i class="ri-arrow-left-s-line"></i></button>
-                <button disabled><i class="ri-arrow-right-s-line"></i></button>
+              <button disabled><i class="ri-arrow-left-s-line"></i></button>
+              <button disabled><i class="ri-arrow-right-s-line"></i></button>
             </div>
+          </div>
         </div>
-    </div>
-
-    
-    </section>
-  </main>
-
-   
+      </section>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script >
-  
-      const incomeCtx = document.getElementById('incomeChart').getContext('2d');
-const topProductCtx = document.getElementById('topProductChart').getContext('2d');
+    <script>
+      const incomeCtx = document.getElementById("incomeChart").getContext("2d");
+      const topProductCtx = document
+        .getElementById("topProductChart")
+        .getContext("2d");
 
-const incomeChart = new Chart(incomeCtx, {
-    type: 'pie',
-    data: {
-        labels: ['Sales Account'],
-        datasets: [{
-            data: [100],
-            backgroundColor: ['#007bff'],
-            hoverBackgroundColor: ['#0056b3']
-        }]
-    },
-    options: {
-        responsive: true,
-        plugins: {
+      const incomeChart = new Chart(incomeCtx, {
+        type: "pie",
+        data: {
+          labels: ["Sales Account"],
+          datasets: [
+            {
+              data: [100],
+              backgroundColor: ["#007bff"],
+              hoverBackgroundColor: ["#0056b3"],
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
             legend: {
-                display: true,
-                position: 'bottom',
-            }
-        }
-    }
-});
+              display: true,
+              position: "bottom",
+            },
+          },
+        },
+      });
 
-const topProductChart = new Chart(topProductCtx, {
-    type: 'pie',
-    data: {
-        labels: [
-            'Remera Jaspeada Niney ROJA M', 'tws', 'A4 Baheer 70 GSM', 
-            'Head and Shoulder Shampoo bottle', '1.0 SQMM RED 90M', 
-            'Keyboard', 'lamp', 'Linda-5L', 'Macbook pro', 'ONION RED'
-        ],
-        datasets: [{
-            data: [10, 15, 5, 12, 20, 8, 7, 18, 9, 6],
-            backgroundColor: [
-                '#007bff', '#28a745', '#dc3545', '#ffc107', '#17a2b8',
-                '#6610f2', '#fd7e14', '#6f42c1', '#e83e8c', '#343a40'
-            ],
-            hoverBackgroundColor: [
-                '#0056b3', '#218838', '#c82333', '#e0a800', '#138496',
-                '#520d91', '#e07a10', '#5a2d82', '#d63384', '#1d2124'
-            ]
-        }]
-    },
-    options: {
-        responsive: true,
-        plugins: {
+      const topProductChart = new Chart(topProductCtx, {
+        type: "pie",
+        data: {
+          labels: [
+            "Remera Jaspeada Niney ROJA M",
+            "tws",
+            "A4 Baheer 70 GSM",
+            "Head and Shoulder Shampoo bottle",
+            "1.0 SQMM RED 90M",
+            "Keyboard",
+            "lamp",
+            "Linda-5L",
+            "Macbook pro",
+            "ONION RED",
+          ],
+          datasets: [
+            {
+              data: [10, 15, 5, 12, 20, 8, 7, 18, 9, 6],
+              backgroundColor: [
+                "#007bff",
+                "#28a745",
+                "#dc3545",
+                "#ffc107",
+                "#17a2b8",
+                "#6610f2",
+                "#fd7e14",
+                "#6f42c1",
+                "#e83e8c",
+                "#343a40",
+              ],
+              hoverBackgroundColor: [
+                "#0056b3",
+                "#218838",
+                "#c82333",
+                "#e0a800",
+                "#138496",
+                "#520d91",
+                "#e07a10",
+                "#5a2d82",
+                "#d63384",
+                "#1d2124",
+              ],
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
             legend: {
-                display: true,
-                position: 'right',
-            }
-        }
-    }
-});
+              display: true,
+              position: "right",
+            },
+          },
+        },
+      });
 
+      document.querySelectorAll(".dropdown").forEach((dropdown) => {
+        dropdown.addEventListener("click", function () {
+          this.classList.toggle("active");
+          this.querySelector(".ri-arrow-down-s-line").classList.toggle(
+            "rotate"
+          );
+        });
+      });
 
-document.querySelectorAll('.dropdown').forEach(dropdown => {
-    dropdown.addEventListener('click', function() {
-        this.classList.toggle('active');
-        this.querySelector('.ri-arrow-down-s-line').classList.toggle('rotate');
-    });
-});
+      const toggleIcon = document.getElementById("toggleIcon");
 
-const toggleIcon = document.getElementById('toggleIcon');
+      toggleIcon.addEventListener("click", function () {
+        toggleIcon.classList.toggle("active");
 
-toggleIcon.addEventListener('click', function() {
-
-    toggleIcon.classList.toggle('active');
- 
-
-    document.querySelector('.sidebar').classList.toggle('collapsed');
-    document.querySelector('.section').classList.toggle('open');
-
-
-});
-
-
+        document.querySelector(".sidebar").classList.toggle("collapsed");
+        document.querySelector(".section").classList.toggle("open");
+      });
     </script>
-</body>
+  </body>
 </html>

@@ -236,9 +236,8 @@ table {
 
 th,
 td {
-  padding: 12px;
+  padding: 19px;
   border: 1px solid #ddd;
-  text-align: center;
   /* white-space: nowrap; Prevent text wrapping */
   width: 29%;
 }
@@ -583,9 +582,12 @@ th {
   color: #ccc;
   cursor: not-allowed;
 }
-
-.ri-toggle-line.active{
+.ri-toggle-line{
   transform: rotate(180deg);
+}
+.ri-toggle-line.active{
+  transform: rotate(0deg);
+
 }
 .sidebar.collapsed{
   width: 0;
@@ -593,3 +595,52 @@ th {
   transition: width 0.5s ease;
 
 }
+
+
+
+/* import porducts popup csss */
+
+
+.import-products{
+  display: none;
+}
+
+.import-products.active{
+  display: block;
+  position: absolute;
+inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  .import-wrapper{
+position: absolute;
+display: flex;
+flex-direction: column;
+width: 60%;
+gap: 20px;
+background-color: #fff;
+top: 50%;
+left: 50%;
+border-radius: 4px;
+transform: translate(-50%,-50%);
+padding: 20px;
+      h1{
+          margin-bottom: 20px;
+      }
+      .import-buttons{
+          display: flex;
+          gap: 10px;
+  }
+  .upload-btn{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+}
+}
+
+
+
+
+
+
+
