@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Brands</title>
-    <link rel="stylesheet" href="/assets/css/product.css" />
+    <link rel="stylesheet" href="/assets/css/dashboard.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -171,22 +171,36 @@
             >
             <i class="ri-arrow-right-line"></i>
           </li>
-          <li>
+          <li class="dropdown">
             <a href="#"><i class="ri-shopping-cart-line"></i> Sales</a>
-            <i class="ri-arrow-right-line"></i>
+            <i class="ri-arrow-down-s-line"></i>
+            <ul class="dropdown-content">
+              <li><a href="salesinvoice.html">Sales Invoice</a></li>
+              <li><a href="creditsnotes.html">Credit Notes</a></li>
+              <li><a href="pos.html">POS</a></li>
+              <li><a href="customerpayment.html">Customer Payment</a></li>
+              <li><a href="customer.html">Customers</a></li>
+            </ul>
           </li>
-          <li>
+          <li class="dropdown">
             <a href="#"><i class="ri-user-add-line"></i> Purchase</a>
-            <i class="ri-arrow-right-line"></i>
+            <i class="ri-arrow-down-s-line"></i>
+            <ul class="dropdown-content">
+              <li><a href="#">Purchase Bills</a></li>
+              <li><a href="#">Expenses</a></li>
+              <li><a href="#">Supplier Payment</a></li>
+              <li><a href="#">Debit Notes</a></li>
+              <li><a href="#">Suppliers</a></li>
+            </ul>
           </li>
           <li class="dropdown">
             <a href="#"><i class="ri-instance-line"></i> Inventory</a>
             <i class="ri-arrow-down-s-line"></i>
             <ul class="dropdown-content">
-              <li><a href="../products.html">Products</a></li>
-              <li><a href="#">Product Category</a></li>
-              <li><a href="#">Product Brand</a></li>
-              <li><a href="#">Units Of Measurement</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="productcategory.html">Product Category</a></li>
+              <li><a href="productbrand.html">Product Brand</a></li>
+              <li><a href="unitofmeasurement.html">Units Of Measurement</a></li>
             </ul>
           </li>
           <li>
@@ -351,5 +365,6 @@
 
       renderBrands();
     </script>
+    <script src="/scripts/dropdown.js"></script>
   </body>
 </html>

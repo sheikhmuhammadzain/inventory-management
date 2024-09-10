@@ -151,6 +151,69 @@ tr:hover{
     cursor: pointer;
     margin-left: 10px;
 }
+.table-container {
+            overflow-x: auto;
+            background-color: white;
+            border-radius: 8px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        table th {
+            background-color: #f4f4f4;
+        }
+        tr:hover {
+            background-color: #f5f5f53d;
+        }
+        .status {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            color: white;
+        }
+        .status.draft { background-color: #f39c12; }
+        .status.approval-pending { background-color: #f1c40f; }
+        .status.approved { background-color: #2ecc71; }
+        .action-menu {
+            position: relative;
+            display: inline-block;
+        }
+        .action-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .dropdown-menu {
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            display: none;
+        }
+        .dropdown-menu a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-menu a:hover {
+            background-color: #f1f1f1;
+        }
+        .show {
+            display: block;
+        }
 </style>
 
   </head>
@@ -248,55 +311,60 @@ tr:hover{
               </div>
               <button class="search-btn"><i class="fas fa-search"></i></button>
           </div>
-  
           <div class="table-container">
-              <table>
-                  <thead>
-                      <tr>
-                          <th>Customer Name</th>
-                          <th>Invoice No</th>
-                          <th>Reference</th>
-                          <th>Date</th>
-                          <th>Total</th>
-                          <th>Status</th>
-                          <th>Actions</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>Njikam Isiaka</td>
-                          <td>DRAFT</td>
-                          <td></td>
-                          <td>9/4/2024 5:26:53 PM</td>
-                          <td>AUD 1676.00</td>
-                          <td><span class="status draft">Draft</span></td>
-                          <td><i class="fas fa-ellipsis-v"></i></td>
-                      </tr>
-                      <tr>
-                          <td>Arafat Hossain</td>
-                          <td>DRAFT</td>
-                          <td></td>
-                          <td>9/2/2024 6:26:53 PM</td>
-                          <td>AUD 2280.00</td>
-                          <td><span class="status approval-pending">Approval Pending</span></td>
-                          <td><i class="fas fa-ellipsis-v"></i></td>
-                      </tr>
-                      <!-- Add more rows here as needed -->
-                  </tbody>
-              </table>
-  
-              <div class="pagination">
-                  <span>Rows per page:</span>
-                  <select>
-                      <option>10</option>
-                      <option>20</option>
-                      <option>50</option>
-                  </select>
-                  <span>1-4 of 4</span>
-                  <i class="fas fa-chevron-left"></i>
-                  <i class="fas fa-chevron-right"></i>
-              </div>
-          </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Customer Name</th>
+                        <th>Invoice No</th>
+                        <th>Reference</th>
+                        <th>Date</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Njikam Isiaka</td>
+                        <td>DRAFT</td>
+                        <td></td>
+                        <td>9/4/2024 5:26:53 PM</td>
+                        <td>AUD 1676.00</td>
+                        <td><span class="status draft">Draft</span></td>
+                        <td>
+                            <div class="action-menu">
+                                <button class="action-button"><i class="ri-more-2-fill"></i></button>
+                                <div class="dropdown-menu">
+                                    <a href="#"><i class="ri-eye-line"></i> View</a>
+                                    <a href="#"><i class="ri-edit-line"></i> Update</a>
+                                    <a href="#"><i class="ri-delete-bin-line"></i> Delete Bill</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Arafat Hossain</td>
+                        <td>DRAFT</td>
+                        <td></td>
+                        <td>9/2/2024 6:26:53 PM</td>
+                        <td>AUD 2280.00</td>
+                        <td><span class="status approval-pending">Approval Pending</span></td>
+                        <td>
+                            <div class="action-menu">
+                                <button class="action-button"><i class="ri-more-2-fill"></i></button>
+                                <div class="dropdown-menu">
+                                    <a href="#"><i class="ri-eye-line"></i> View</a>
+                                    <a href="#"><i class="ri-edit-line"></i> Update</a>
+                                    <a href="#"><i class="ri-delete-bin-line"></i> Delete Bill</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
       </div>
 
          
@@ -304,6 +372,38 @@ tr:hover{
     </main>
 
     <script>
+
+
+document.addEventListener('DOMContentLoaded', function() {
+            const actionButtons = document.querySelectorAll('.action-button');
+            
+            actionButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const menu = this.nextElementSibling;
+                    menu.classList.toggle('show');
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                const menus = document.querySelectorAll('.dropdown-menu');
+                menus.forEach(menu => {
+                    if (menu.classList.contains('show')) {
+                        menu.classList.remove('show');
+                    }
+                });
+            });
+
+            const menuItems = document.querySelectorAll('.dropdown-menu a');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('Clicked:', this.textContent.trim());
+                    this.closest('.dropdown-menu').classList.remove('show');
+                });
+            });
+        });
+
       document.querySelectorAll(".dropdown").forEach((dropdown) => {
         dropdown.addEventListener("click", function () {
           this.classList.toggle("active");

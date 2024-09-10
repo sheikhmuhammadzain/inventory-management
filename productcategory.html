@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products</title>
-    <link rel="stylesheet" href="/assets/css/product.css" />
+    <link rel="stylesheet" href="/assets/css/dashboard.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -56,7 +56,8 @@
             margin: auto;
             background: white;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
         h1 {
             color: #333;
@@ -163,46 +164,60 @@
       </div>
     </header>
     <main>
-      <aside class="sidebar">
-        <ul>
-          <li>
-            <a href="dashboard.html"
-              ><i class="ri-dashboard-2-line"></i> Dashboard</a
-            >
-            <i class="ri-arrow-right-line"></i>
-          </li>
-          <li>
-            <a href="#"><i class="ri-shopping-cart-line"></i> Sales</a>
-            <i class="ri-arrow-right-line"></i>
-          </li>
-          <li>
-            <a href="#"><i class="ri-user-add-line"></i> Purchase</a>
-            <i class="ri-arrow-right-line"></i>
-          </li>
-          <li class="dropdown">
-            <a href="#"><i class="ri-instance-line"></i> Inventory</a>
-            <i class="ri-arrow-down-s-line"></i>
-            <ul class="dropdown-content">
-              <li><a href="../products.html">Products</a></li>
-              <li><a href="#">Product Category</a></li>
-              <li><a href="#">Product Brand</a></li>
-              <li><a href="#">Units Of Measurement</a></li>
+        <aside class="sidebar">
+            <ul>
+              <li>
+                <a href="dashboard.html"
+                  ><i class="ri-dashboard-2-line"></i> Dashboard</a
+                >
+                <i class="ri-arrow-right-line"></i>
+              </li>
+              <li class="dropdown">
+                <a href="#"><i class="ri-shopping-cart-line"></i> Sales</a>
+                <i class="ri-arrow-down-s-line"></i>
+                <ul class="dropdown-content">
+                  <li><a href="salesinvoice.html">Sales Invoice</a></li>
+                  <li><a href="creditsnotes.html">Credit Notes</a></li>
+                  <li><a href="pos.html">POS</a></li>
+                  <li><a href="customerpayment.html">Customer Payment</a></li>
+                  <li><a href="customer.html">Customers</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#"><i class="ri-user-add-line"></i> Purchase</a>
+                <i class="ri-arrow-down-s-line"></i>
+                <ul class="dropdown-content">
+                  <li><a href="#">Purchase Bills</a></li>
+                  <li><a href="#">Expenses</a></li>
+                  <li><a href="#">Supplier Payment</a></li>
+                  <li><a href="#">Debit Notes</a></li>
+                  <li><a href="#">Suppliers</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#"><i class="ri-instance-line"></i> Inventory</a>
+                <i class="ri-arrow-down-s-line"></i>
+                <ul class="dropdown-content">
+                  <li><a href="products.html">Products</a></li>
+                  <li><a href="productcategory.html">Product Category</a></li>
+                  <li><a href="productbrand.html">Product Brand</a></li>
+                  <li><a href="unitofmeasurement.html">Units Of Measurement</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><i class="ri-user-line"></i> Human Resource</a>
+                <i class="ri-arrow-right-line"></i>
+              </li>
+              <li>
+                <a href="#"><i class="ri-money-dollar-circle-line"></i> Budget</a>
+                <i class="ri-arrow-right-line"></i>
+              </li>
+              <li>
+                <a href="#"><i class="ri-file-list-3-line"></i> Reports</a>
+                <i class="ri-arrow-right-line"></i>
+              </li>
             </ul>
-          </li>
-          <li>
-            <a href="#"><i class="ri-user-line"></i> Human Resource</a>
-            <i class="ri-arrow-right-line"></i>
-          </li>
-          <li>
-            <a href="#"><i class="ri-money-dollar-circle-line"></i> Budget</a>
-            <i class="ri-arrow-right-line"></i>
-          </li>
-          <li>
-            <a href="#"><i class="ri-file-list-3-line"></i> Reports</a>
-            <i class="ri-arrow-right-line"></i>
-          </li>
-        </ul>
-      </aside>
+          </aside>
       <section class="section">
         <div class="container">
           <div class="header">
@@ -272,8 +287,8 @@
                   <td><img src="${category.image}" alt="${category.name}" width="50" height="50"></td>
                   <td>${category.name}</td>
                   <td>
-                      <button class="action-btn edit-btn" data-id="${category.id}">✏️</button>
-                      <button class="action-btn delete-btn" data-id="${category.id}">🗑️</button>
+                      <button class="action-btn edit-btn" data-id="${category.id}"><i class="ri-pencil-line"></i></button>
+                      <button class="action-btn delete-btn" data-id="${category.id}"><i class="ri-delete-bin-line"></i></button>
                   </td>
               `;
               tbody.appendChild(row);
